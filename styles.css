@@ -8309,3 +8309,133 @@ textarea {
     align-content: start !important;
   }
 }
+
+/* Boss-preview polish: keep large-screen display type from clipping or colliding. */
+@media (min-width: 301px) {
+  .figma-home h1,
+  .figma-home h2,
+  .figma-subpage h1,
+  .figma-subpage h2 {
+    overflow-wrap: normal;
+    word-break: normal;
+    text-wrap: balance;
+  }
+
+  .figma-home .figma-hero h1 {
+    max-width: 660px;
+    font-size: clamp(48px, 5.8vw, 82px);
+    line-height: 0.92;
+  }
+
+  .figma-subpage .page-hero h1,
+  .figma-subpage .team-hero-v3 h1,
+  .figma-subpage .detail-hero-v3 h1,
+  .figma-subpage .serve-hero h1,
+  .figma-subpage .network-hero-v3 h1,
+  .figma-subpage .contact-hero-v3 h1,
+  .figma-subpage .bio-hero-v3 h1,
+  .figma-subpage .article-hero-v3 h1 {
+    font-size: clamp(40px, 5.2vw, 72px);
+    line-height: 0.96;
+  }
+
+  .figma-subpage .about-hero-v3 h1 {
+    max-width: 600px;
+    font-size: clamp(38px, 5vw, 68px);
+    line-height: 0.98;
+  }
+
+  .figma-subpage .academy-hero-v3 > div {
+    width: min(520px, calc(100% - 56px));
+    padding: clamp(22px, 3vw, 36px) clamp(24px, 4vw, 44px);
+  }
+
+  .figma-subpage .academy-hero-v3 h1 {
+    margin-bottom: 12px;
+    font-size: clamp(34px, 4.1vw, 52px);
+    line-height: 1.02;
+  }
+
+  .figma-subpage .academy-hero-v3 p:not(.section-kicker) {
+    max-width: 360px;
+    font-size: clamp(14px, 1.2vw, 16px);
+    line-height: 1.45;
+  }
+
+  .figma-home .figma-featured h2,
+  .figma-home .figma-section-copy h2,
+  .figma-home .figma-contact h2,
+  .figma-subpage .about-editorial h2,
+  .figma-subpage .about-story h2,
+  .figma-subpage .team-profile-band h2,
+  .figma-subpage .detail-snapshot h2,
+  .figma-subpage .detail-process-grid h2,
+  .figma-subpage .academy-note h2,
+  .figma-subpage .academy-feature-v3 h2,
+  .figma-subpage .figma-contact h2 {
+    font-size: clamp(30px, 3.8vw, 50px);
+    line-height: 1.02;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 560px) {
+  .figma-home .figma-hero {
+    min-height: 430px !important;
+  }
+
+  .figma-home .figma-hero-copy {
+    top: 76px !important;
+    left: 20px !important;
+    width: min(300px, calc(100% - 40px)) !important;
+  }
+
+  .figma-home .figma-hero h1 {
+    max-width: 285px !important;
+    margin-bottom: 12px !important;
+    font-size: clamp(34px, 10vw, 42px) !important;
+    line-height: 0.96 !important;
+  }
+
+  .figma-home .figma-hero p {
+    max-width: 260px !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  .figma-subpage .academy-hero-v3 {
+    min-height: 260px !important;
+  }
+
+  .figma-subpage .academy-hero-v3 > div {
+    width: min(320px, calc(100% - 40px)) !important;
+    padding: 20px 22px !important;
+  }
+
+  .figma-subpage .academy-hero-v3 h1 {
+    margin-bottom: 8px !important;
+    font-size: clamp(26px, 8vw, 34px) !important;
+    line-height: 1.02 !important;
+  }
+
+  .figma-subpage .academy-hero-v3 p:not(.section-kicker) {
+    max-width: 260px !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+  }
+}
+
+@media (min-width: 561px) and (max-width: 900px) {
+  .figma-home .figma-hero h1,
+  .figma-subpage .page-hero h1,
+  .figma-subpage .team-hero-v3 h1,
+  .figma-subpage .detail-hero-v3 h1,
+  .figma-subpage .serve-hero h1 {
+    font-size: clamp(40px, 6.2vw, 54px) !important;
+    line-height: 0.98 !important;
+  }
+
+  .figma-subpage .academy-hero-v3 h1 {
+    font-size: clamp(32px, 5.2vw, 44px) !important;
+    line-height: 1.04 !important;
+  }
+}
