@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="104" viewBox="0 0 420 104" role="img" aria-labelledby="title desc">
+  <title id="title">Leppla Capital Management</title>
+  <desc id="desc">A stepped pyramid mark with the Leppla Capital Management wordmark.</desc>
+  <g fill="none" fill-rule="evenodd">
+    <g transform="translate(8 9)">
+      <path d="M44 1 87 86H1L44 1Z" fill="#ffffff"/>
+      <path d="M44 16 59 46H29L44 16Z" fill="#c88419"/>
+      <path d="M27 50h34l11 21H16l11-21Z" fill="#d39a34"/>
+      <path d="M13 75h62l6 12H7l6-12Z" fill="#e1ad4b"/>
+      <path d="M44 10v74M26 50h36M13 75h62" stroke="#082d52" stroke-width="2.2" stroke-linecap="round" opacity=".52"/>
+      <path d="M44 1 87 86H1L44 1Z" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(112 31)">
+      <text x="0" y="15" fill="#ffffff" font-family="Libre Franklin, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="2.8">LEPPLA CAPITAL</text>
+      <text x="1" y="42" fill="#d79c34" font-family="Libre Franklin, Arial, sans-serif" font-size="12" font-weight="800" letter-spacing="4.6">MANAGEMENT</text>
+      <path d="M1 57h246" stroke="#ffffff" stroke-width="1" opacity=".22"/>
+    </g>
+  </g>
+</svg>
