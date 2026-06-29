@@ -21,23 +21,21 @@
     <text x="600" y="92" text-anchor="middle" fill="#ffffff" opacity=".72" font-size="26">Risk-Aware Allocation</text>
     <text x="600" y="132" text-anchor="middle" fill="#c88b21" font-size="20">The Securities Investment Pyramid</text>
   </g>
-  <g filter="url(#shadow)" font-family="Inter, Arial, sans-serif" font-weight="800" letter-spacing="3" text-anchor="middle" text-transform="uppercase">
-    <polygon points="480,190 720,190 690,276 510,276" fill="url(#gold)" stroke="#fff" stroke-width="5"/>
-    <text x="600" y="238" fill="#fff" font-size="24">Direct Investments</text>
-    <polygon points="412,302 788,302 748,390 452,390" fill="#203d56" stroke="#fff" stroke-width="5"/>
-    <text x="600" y="355" fill="#fff" font-size="24">Alternative Strategies</text>
-    <polygon points="342,416 858,416 812,504 388,504" fill="#294961" stroke="#fff" stroke-width="5"/>
+  <g filter="url(#shadow)" font-family="Inter, Arial, sans-serif" font-weight="800" letter-spacing="2" text-anchor="middle" text-transform="uppercase">
+    <polygon points="480,190 720,190 752,276 448,276" fill="url(#gold)" stroke="#fff" stroke-width="5"/>
+    <text x="600" y="238" fill="#fff" font-size="20">Direct Investments</text>
+    <polygon points="452,302 748,302 788,390 412,390" fill="#203d56" stroke="#fff" stroke-width="5"/>
+    <text x="600" y="355" fill="#fff" font-size="23">Alternative Strategies</text>
+    <polygon points="388,416 812,416 858,504 342,504" fill="#294961" stroke="#fff" stroke-width="5"/>
     <text x="600" y="470" fill="#fff" font-size="26">Equities</text>
-    <polygon points="272,530 928,530 876,620 324,620" fill="#31546c" stroke="#fff" stroke-width="5"/>
+    <polygon points="324,530 876,530 928,620 272,620" fill="#31546c" stroke="#fff" stroke-width="5"/>
     <text x="600" y="585" fill="#fff" font-size="26">Balanced Allocation</text>
-    <polygon points="200,646 1000,646 938,740 262,740" fill="#456a80" stroke="#fff" stroke-width="5"/>
+    <polygon points="262,646 938,646 1000,740 200,740" fill="#456a80" stroke="#fff" stroke-width="5"/>
     <text x="600" y="704" fill="#fff" font-size="28">Fixed Income Base</text>
   </g>
   <g font-family="Inter, Arial, sans-serif" fill="#ffffff" font-size="22" font-weight="700">
     <path d="M1032 718V214" stroke="#c88b21" stroke-width="6" stroke-linecap="round"/>
     <path d="M1032 214l-22 34M1032 214l22 34" stroke="#c88b21" stroke-width="6" stroke-linecap="round"/>
     <text x="1058" y="482" transform="rotate(-90 1058 482)" text-anchor="middle" fill="#cbd6df">Increasing risk and return potential</text>
-    <text x="200" y="810" fill="#cbd6df">Foundation</text>
-    <text x="1000" y="810" text-anchor="end" fill="#cbd6df">Specialized exposure</text>
   </g>
 </svg>

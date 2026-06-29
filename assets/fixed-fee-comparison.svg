@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
   <title id="title">Fixed-fee comparison returns</title>
-  <desc id="desc">An illustrative line chart showing fixed-fee management retaining more portfolio value over time than variable-fee management.</desc>
+  <desc id="desc">An illustrative two-year fee comparison showing a fixed 50 basis point fee against a variable one percent assets-under-management fee example.</desc>
   <defs>
     <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#ffffff"/>
@@ -17,8 +17,8 @@
     <rect x="125" y="105" width="950" height="650" rx="10" fill="url(#paper)" stroke="#d8dde1" stroke-width="3"/>
   </g>
   <g font-family="Inter, Arial, sans-serif" font-weight="800" letter-spacing="4" text-transform="uppercase">
-    <text x="170" y="172" fill="#082d52" font-size="28">Fee Drag Over Time</text>
-    <text x="170" y="212" fill="#6a7883" font-size="18">Illustrative retained portfolio value</text>
+    <text x="170" y="164" fill="#082d52" font-size="30">Two-Year Fee Example</text>
+    <text x="170" y="206" fill="#6a7883" font-size="19">Illustrative fees on a $1,000,000 portfolio</text>
   </g>
   <g transform="translate(170 275)">
     <path d="M0 410H850" stroke="#8ea0ad" stroke-width="4"/>
@@ -29,16 +29,22 @@
     <circle cx="820" cy="36" r="13" fill="#c88b21"/>
     <circle cx="820" cy="104" r="13" fill="#94a3ae"/>
     <g font-family="Inter, Arial, sans-serif" font-weight="800">
-      <text x="0" y="470" fill="#667580" font-size="26">Today</text>
-      <text x="760" y="470" fill="#667580" font-size="26">Future</text>
-      <text x="560" y="50" fill="#082d52" font-size="28">Fixed fee</text>
-      <text x="548" y="132" fill="#596a76" font-size="28">Variable fee</text>
+      <text x="0" y="470" fill="#667580" font-size="24">Start</text>
+      <text x="368" y="470" fill="#667580" font-size="24">Year 1</text>
+      <text x="760" y="470" fill="#667580" font-size="24">Year 2</text>
+      <text x="528" y="32" fill="#082d52" font-size="26">Fixed 0.50%</text>
+      <text x="552" y="214" fill="#596a76" font-size="26">Variable 1.00%</text>
+      <text x="92" y="82" fill="#667580" font-size="20">$22k</text>
+      <text x="92" y="177" fill="#667580" font-size="20">$15k</text>
+      <text x="92" y="272" fill="#667580" font-size="20">$7.5k</text>
     </g>
   </g>
-  <g font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#52616c">
-    <rect x="170" y="800" width="48" height="8" rx="4" fill="#c88b21"/>
-    <text x="235" y="810">Fixed fee: more retained growth</text>
-    <rect x="620" y="800" width="48" height="8" rx="4" fill="#94a3ae"/>
-    <text x="685" y="810">Variable fee: fees rise with assets</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#52616c">
+    <rect x="170" y="782" width="48" height="8" rx="4" fill="#c88b21"/>
+    <text x="235" y="792">Fixed fee: 50 bps, locked for two years</text>
+    <rect x="170" y="826" width="48" height="8" rx="4" fill="#94a3ae"/>
+    <text x="235" y="836">Variable fee example: 1.00% AUM rises as assets grow</text>
+    <text x="778" y="792" fill="#082d52" font-size="24">Approx. $11k less fee drag</text>
+    <text x="778" y="824" fill="#6a7883" font-size="16">Illustrative only; actual results vary.</text>
   </g>
 </svg>
