@@ -8,48 +8,31 @@
       name="description"
       content="Leppla Capital Management provides fiduciary investment advisory, portfolio management, retirement planning, and financial education."
     />
-    <link rel="stylesheet" href="styles.css?v=20260625-no-overlap-final" />
+    <link rel="stylesheet" href="styles.css?v=20260629-home-rework-2" />
   </head>
   <body class="figma-home">
     <header class="figma-header">
       <a class="figma-brand" href="index.html" aria-label="Leppla Capital Management home">
         <img src="assets/leppla-pyramid-logo-white.svg" alt="Leppla Capital Management" />
+        <span>Leppla Capital Management</span>
       </a>
       <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
         <span></span>
         <span></span>
       </button>
       <nav class="figma-nav" id="site-nav" aria-label="Primary navigation">
-        <a href="about.html">About Leppla Capital</a>
-        <a href="services.html">Investment Services</a>
-        <a href="contact.html">Calculator &amp; Portfolio Services</a>
-        <a href="who-we-serve.html">Who We Serve</a>
-        <a href="team.html">Who We Are</a>
-        <a href="academy.html">Leppla Academy</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Investment Approach</a>
+        <a href="team.html">Our Team</a>
+        <a href="who-we-serve.html">Investment Services</a>
+        <a href="academy.html">Resources</a>
         <a class="figma-nav-cta" href="contact.html">Get In Touch</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="figma-hero">
-        <img class="figma-hero-image" src="assets/hero-advisor.png" alt="Advisor speaking with clients in a hallway" />
-        <div class="figma-hero-shade"></div>
-        <div class="figma-hero-copy">
-          <h1>Your partner<br />in seeking<br />financial<br />freedom.</h1>
-          <p>
-            Founded at the intersection of care and financial planning, our work is to build wealth beyond
-            the numbers.
-          </p>
-          <div class="figma-actions">
-            <a href="about.html">Learn More</a>
-            <a href="contact.html">Get in Touch</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="figma-community" aria-label="Affiliations and community">
-        <p>Building a community of smarter investors.</p>
-        <div class="logo-marquee" aria-label="Affiliations and approved references">
+      <section class="home-logo-strip" aria-label="Affiliations and approved references">
+        <div class="logo-marquee">
           <div class="logo-track">
             <span class="logo-mark text">Yale</span>
             <span class="logo-mark text">UC Berkeley</span>
@@ -64,8 +47,8 @@
             <span class="logo-mark text">Sprinkler Fitters Local 483</span>
             <span class="logo-mark text">Lawdragon 500</span>
             <span class="logo-mark text">Best Lawyers in America</span>
-            <span class="logo-mark text">Yale</span>
-            <span class="logo-mark text">UC Berkeley</span>
+            <span class="logo-mark text" aria-hidden="true">Yale</span>
+            <span class="logo-mark text" aria-hidden="true">UC Berkeley</span>
             <span class="logo-mark text" aria-hidden="true">Johns Hopkins</span>
             <span class="logo-mark text" aria-hidden="true">Morgan Stanley</span>
             <span class="logo-mark text" aria-hidden="true">Junior Achievement</span>
@@ -81,112 +64,110 @@
         </div>
       </section>
 
-      <section class="figma-featured" id="academy">
-        <div class="figma-featured-head">
-          <div>
-            <p class="figma-kicker">Resources &amp; Insights</p>
-            <h2>Featured Content</h2>
-            <p>Clear, practical insights from our team on the financial topics that matter.</p>
+      <section class="home-intro">
+        <div>
+          <p class="figma-kicker">Leppla Capital Management</p>
+          <h1>Investment counsel built around discipline, integrity, and results.</h1>
+          <p>
+            We pair disciplined portfolio construction with a fixed-fee model designed to keep our advice
+            aligned with the long-term interests of the clients we serve.
+          </p>
+          <div class="figma-actions">
+            <a href="#principles">Our Principles</a>
+            <a href="contact.html">Get in Touch</a>
           </div>
-          <div class="figma-featured-actions">
-            <a href="academy.html">View All Resources</a>
-            <div class="figma-rail-controls" aria-label="Featured content carousel controls">
-              <span>1 of 2</span>
-              <button type="button" data-featured-prev aria-label="Previous featured content">‹</button>
-              <button type="button" data-featured-next aria-label="Next featured content">›</button>
+        </div>
+      </section>
+
+      <section class="home-split" id="principles">
+        <div class="home-split-copy">
+          <p class="figma-kicker">Our Principles</p>
+          <h2>Clients are our only priority.</h2>
+          <p>
+            At Leppla Capital, clients are our only priority. We built this firm on three principles:
+            Discipline, Integrity, and Results. Our fixed-fee management model is designed to ensure that
+            every decision is made to maximize your long-term returns. As your assets grow, our fees stay
+            the same.
+          </p>
+        </div>
+        <figure class="home-photo">
+          <img src="assets/hero-advisor.png" alt="Advisor speaking with a worker and a colleague" />
+        </figure>
+      </section>
+
+      <section class="home-split home-split-reverse" id="approach">
+        <div class="home-visual pyramid-visual" aria-label="Securities Investment Pyramid visual">
+          <p class="visual-eyebrow">Risk-Aware Allocation</p>
+          <div class="pyramid-stack">
+            <span>Direct Investments</span>
+            <span>Alternative Strategies</span>
+            <span>Equities</span>
+            <span>Balanced Allocation</span>
+            <span>Fixed Income Base</span>
+          </div>
+          <div class="risk-caption">
+            <span>Foundation</span>
+            <span>Increasing risk and return potential</span>
+          </div>
+        </div>
+        <div class="home-split-copy">
+          <p class="figma-kicker">Our Approach</p>
+          <h2>The Securities Investment Pyramid™</h2>
+          <p>
+            Our Securities Investment Pyramid™ redefines traditional portfolio construction by layering
+            investments according to risk, with higher-risk assets positioned toward the apex. What sets
+            our approach apart is its dynamic adaptability within a systematic framework.
+          </p>
+          <p>
+            As an investor’s risk tolerance increases, the pyramid expands upward from foundational
+            investments through direct investments, while the relative percentages and specific holdings
+            within each layer are adjusted. Every portfolio starts with a foundational fixed income base.
+            While U.S. Treasuries may be appropriate for a conservative portfolio, an aggressive portfolio
+            may prefer higher-grade corporate bonds.
+          </p>
+        </div>
+      </section>
+
+      <section class="home-split" id="fixed-fee">
+        <div class="home-split-copy">
+          <p class="figma-kicker">Fixed-Fee Management</p>
+          <h2>Clients should keep more of what their portfolios earn.</h2>
+          <p>
+            Traditional variable management fees rise as assets grow, which directly reduces the benefits
+            of compounding over time. At Leppla Capital Management, we charge a simple fixed fee of 50
+            basis points.
+          </p>
+          <p>
+            This rate is locked in for two years and is only reassessed at the end of each period. Our
+            clients enjoy both lower overall costs and fee predictability, allowing their investments to
+            compound more efficiently without the drag of escalating fees.
+          </p>
+        </div>
+        <div class="home-visual fee-chart" aria-label="Comparison return chart">
+          <p class="visual-eyebrow">Fee Drag Over Time</p>
+          <div class="fee-curve-chart">
+            <svg viewBox="0 0 620 320" role="img" aria-label="Fixed-fee portfolios retaining more value over time than variable-fee portfolios">
+              <line x1="70" y1="42" x2="70" y2="260"></line>
+              <line x1="70" y1="260" x2="565" y2="260"></line>
+              <path class="grid-line" d="M70 205H565"></path>
+              <path class="grid-line" d="M70 150H565"></path>
+              <path class="grid-line" d="M70 95H565"></path>
+              <path class="fee-line variable" d="M75 230 C170 208 230 190 310 166 C400 139 470 116 555 91"></path>
+              <path class="fee-line fixed" d="M75 230 C170 198 230 169 310 132 C405 88 475 62 555 42"></path>
+              <circle class="variable-dot" cx="555" cy="91" r="6"></circle>
+              <circle class="fixed-dot" cx="555" cy="42" r="6"></circle>
+              <text x="72" y="292">Today</text>
+              <text x="510" y="292">Future</text>
+              <text class="label variable-label" x="382" y="112">Variable fee</text>
+              <text class="label fixed-label" x="390" y="54">Fixed fee</text>
+            </svg>
+            <div class="chart-legend">
+              <span><i class="fixed-key"></i> Fixed fee: more retained growth</span>
+              <span><i class="variable-key"></i> Variable fee: fees rise with assets</span>
             </div>
           </div>
+          <p>Illustrative comparison of retained portfolio value over time.</p>
         </div>
-        <div class="figma-card-rail" data-featured-rail>
-          <a class="figma-resource-card" href="retirement-savings.html">
-            <img src="assets/resource-video.png" alt="Advisor speaking on a podcast" />
-            <div><span>Video / August 8, 2025</span><h3>How Much Should You Really Be Saving for Retirement?</h3><p>Bruce Leppla explains what matters most when planning for retirement.</p></div>
-          </a>
-          <a class="figma-resource-card" href="strategy-without-millions.html">
-            <img src="assets/resource-notebook-large.png" alt="Notebook with financial planning notes" />
-            <div><span>Education / June 19, 2025</span><h3>Don’t Have Millions? You Still Need a Strategy.</h3><p>Financial growth starts with what you can plan, not only what you have.</p></div>
-          </a>
-          <a class="figma-resource-card" href="investment-policy-statement.html">
-            <img src="assets/resource-meeting-large.png" alt="Investment meeting with advisors" />
-            <div><span>Investment Process / January 10, 2025</span><h3>How to Build a Strong Investment Policy Statement</h3><p>A clear investment policy can make decisions easier when markets move.</p></div>
-          </a>
-          <a class="figma-resource-card" href="first-step-financial-planning.html">
-            <img src="assets/planning-notebook.png" alt="Planning notes" />
-            <div><span>Planning / February 4, 2025</span><h3>The Missing First Step in Financial Planning</h3><p>Start with purpose, then build the portfolio around the plan.</p></div>
-          </a>
-        </div>
-      </section>
-
-      <section class="figma-approach">
-        <figure>
-          <img src="assets/resource-meeting-large.png" alt="Advisor meeting with clients" />
-        </figure>
-        <div class="figma-section-copy">
-          <p class="figma-kicker">Our Approach</p>
-          <h2>Your Plan, Built to Last</h2>
-          <p>
-            Every plan begins with the human understanding your finances deserve, clarifying goals, and
-            aligning strategy to your risk profile. From there, we apply decades of investment expertise to
-            build and manage a strategy that adapts with you over time.
-          </p>
-          <a href="services.html">Explore Our Process</a>
-        </div>
-      </section>
-
-      <section class="figma-services" id="services">
-        <div class="figma-section-copy">
-          <p class="figma-kicker">What We Do</p>
-          <h2>Proven Principles, Personalized</h2>
-          <p>
-            Leppla Capital provides personalized financial planning and support for individuals, families,
-            businesses, nonprofits, labor unions, and other organizations seeking clear advice.
-          </p>
-          <div class="figma-actions dark">
-            <a href="services.html">Our Services</a>
-            <a href="academy.html">Resources Hub</a>
-          </div>
-        </div>
-        <div class="figma-service-grid">
-          <article><img src="assets/icon-retirement.png" alt="" /><span>Retirement Planning</span></article>
-          <article><img src="assets/icon-portfolio.png" alt="" /><span>Portfolio Management</span></article>
-          <article><img src="assets/icon-education.png" alt="" /><span>Financial Education</span></article>
-          <article><img src="assets/icon-debt.png" alt="" /><span>Debt Management</span></article>
-          <article><img src="assets/icon-tax.png" alt="" /><span>Tax Planning</span></article>
-          <article><img src="assets/icon-estate.png" alt="" /><span>Estate Planning</span></article>
-          <article><img src="assets/icon-401k.png" alt="" /><span>401K Planning</span></article>
-          <article><img src="assets/icon-cashflow.png" alt="" /><span>Cash Flow Strategy</span></article>
-        </div>
-      </section>
-
-      <section class="figma-serve" id="serve">
-        <div class="figma-serve-collage">
-          <img src="assets/network-2.jpg" alt="Professional gathering" />
-          <img src="assets/network-3.jpg" alt="Financial education group" />
-          <img src="assets/network-5.jpg" alt="Community event" />
-          <img src="assets/san-francisco.png" alt="Campus walkway" />
-        </div>
-        <div class="figma-section-copy">
-          <p class="figma-kicker">Who We Serve</p>
-          <h2>Supporting Individuals and Institutions</h2>
-          <p>
-            We work with a wide range of clients, from individuals and families to unions and nonprofits,
-            all with one thing in common: a need for clear, trustworthy financial guidance.
-          </p>
-          <a href="who-we-serve.html">Meet Our Clients</a>
-        </div>
-      </section>
-
-      <section class="figma-resource-hub">
-        <div class="figma-section-copy">
-          <p class="figma-kicker">Resource Hub</p>
-          <h2>Financial Clarity, On Your Terms</h2>
-          <p>
-            We believe education builds confidence. Our resource hub offers practical guides, videos, and tools
-            for hands-on investors and clients who want to make informed decisions with confidence.
-          </p>
-          <a href="academy.html">Explore Resources</a>
-        </div>
-        <img src="assets/advisory-talk.png" alt="Advisor recording a financial education conversation" />
       </section>
 
       <section class="figma-contact" id="contact">
@@ -235,6 +216,6 @@
       </p>
     </footer>
 
-    <script src="script.js?v=20260625-no-overlap-final"></script>
+    <script src="script.js?v=20260629-home-rework-2"></script>
   </body>
 </html>
