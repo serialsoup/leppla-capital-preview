@@ -8696,6 +8696,33 @@ textarea {
   margin: 0;
 }
 
+.home-graphic {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: clamp(22px, 3.6vw, 48px);
+  background: #082d52;
+}
+
+.home-graphic-light {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.82)),
+    url("assets/planning-notebook.png") center / cover no-repeat;
+}
+
+.home-graphic img {
+  display: block;
+  width: min(100%, 780px);
+  height: auto;
+  max-height: min(760px, 86vh);
+  object-fit: contain;
+  box-shadow: 0 26px 70px rgba(7, 27, 49, 0.16);
+}
+
+.home-graphic:not(.home-graphic-light) img {
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
+}
+
 .home-photo img {
   width: 100%;
   height: 100%;
@@ -9026,6 +9053,14 @@ textarea {
   .home-photo,
   .home-visual {
     min-height: 340px;
+  }
+
+  .home-graphic {
+    padding: 24px 20px;
+  }
+
+  .home-graphic img {
+    max-height: none;
   }
 
   .home-photo img {
