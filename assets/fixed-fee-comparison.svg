@@ -18,9 +18,10 @@
   </g>
   <g font-family="Inter, Arial, sans-serif" font-weight="800" letter-spacing="3">
     <text x="160" y="150" fill="#082d52" font-size="30">Total Fees Charged Over Account Lifetime</text>
-    <text x="160" y="190" fill="#6a7883" font-size="19">Illustrative $1,000,000 portfolio growing 6% annually - lower total fees are better</text>
+    <text x="160" y="190" fill="#6a7883" font-size="18">Illustrative $1,000,000 portfolio growing 6% annually</text>
+    <text x="160" y="218" fill="#6a7883" font-size="18">Lower total fees are better; values shown are cumulative.</text>
   </g>
-  <g transform="translate(170 250)" font-family="Inter, Arial, sans-serif">
+  <g transform="translate(170 270)" font-family="Inter, Arial, sans-serif">
     <path d="M0 430H860" stroke="#8ea0ad" stroke-width="4"/>
     <path d="M0 430V20" stroke="#8ea0ad" stroke-width="4"/>
     <path d="M0 330H860M0 230H860M0 130H860" stroke="#d9e0e5" stroke-width="3"/>
@@ -47,18 +48,18 @@
       <text x="285" y="474" fill="#667580" font-size="22">Year 2</text>
       <text x="500" y="474" fill="#667580" font-size="22">Year 3</text>
       <text x="760" y="474" fill="#667580" font-size="22">Year 4</text>
-      <text x="760" y="232" fill="#082d52" font-size="18">$21.9k</text>
-      <text x="760" y="118" fill="#596a76" font-size="18">$43.7k</text>
-      <text x="640" y="218" fill="#082d52" font-size="23">Fixed fee 0.50%</text>
-      <text x="620" y="116" fill="#596a76" font-size="23">Variable fee 1.00% AUM</text>
+      <text x="790" y="226" text-anchor="start" fill="#082d52" font-size="18">$21.9k</text>
+      <text x="790" y="112" text-anchor="start" fill="#596a76" font-size="18">$43.7k</text>
+      <text x="558" y="220" text-anchor="start" fill="#082d52" font-size="23">Fixed fee 0.50%</text>
+      <text x="486" y="110" text-anchor="start" fill="#596a76" font-size="23">Variable fee 1.00% AUM</text>
     </g>
   </g>
   <g font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" fill="#52616c">
-    <rect x="170" y="792" width="48" height="10" rx="5" fill="#c88b21"/>
-    <text x="235" y="803">Fixed fee: lower total fees charged</text>
-    <rect x="170" y="832" width="48" height="10" rx="5" fill="#94a3ae"/>
-    <text x="235" y="843">Variable fee example: fees rise as assets grow</text>
-    <text x="705" y="800" fill="#082d52" font-size="26">Lower line = less paid in fees</text>
-    <text x="705" y="832" fill="#6a7883" font-size="16">Illustrative only; actual portfolio values and fees vary.</text>
+    <rect x="170" y="806" width="48" height="10" rx="5" fill="#c88b21"/>
+    <text x="235" y="817">Fixed fee: lower total fees charged</text>
+    <rect x="170" y="844" width="48" height="10" rx="5" fill="#94a3ae"/>
+    <text x="235" y="855">Variable fee example: fees rise as assets grow</text>
+    <text x="705" y="812" fill="#082d52" font-size="24">Lower line = less paid in fees</text>
+    <text x="705" y="844" fill="#6a7883" font-size="15">Illustrative only; actual portfolio values and fees vary.</text>
   </g>
 </svg>
