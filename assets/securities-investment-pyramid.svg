@@ -21,20 +21,20 @@
     <text x="600" y="100" text-anchor="middle" fill="#c88b21" font-size="24">Risk tolerance determines the percentages</text>
   </g>
   <g filter="url(#shadow)" font-family="Inter, Arial, sans-serif" font-weight="800" letter-spacing="2" text-anchor="middle" text-transform="uppercase">
-    <polygon points="540,150 660,150 762,254 438,254" fill="url(#gold)" stroke="#fff" stroke-width="5"/>
-    <text x="600" y="213" fill="#fff" font-size="21">Direct Investments</text>
-    <polygon points="456,280 744,280 858,392 342,392" fill="#203d56" stroke="#fff" stroke-width="5"/>
-    <text x="600" y="346" fill="#fff" font-size="28">Alpha Level Two</text>
-    <polygon points="342,418 858,418 974,536 226,536" fill="#294961" stroke="#fff" stroke-width="5"/>
-    <text x="600" y="488" fill="#fff" font-size="30">Alpha Level One</text>
-    <polygon points="226,562 974,562 1092,686 108,686" fill="#31546c" stroke="#fff" stroke-width="5"/>
-    <text x="600" y="635" fill="#fff" font-size="32">Core Market Beta</text>
-    <polygon points="108,712 1092,712 1180,820 20,820" fill="#456a80" stroke="#fff" stroke-width="5"/>
-    <text x="600" y="778" fill="#fff" font-size="34">Foundational Investments</text>
+    <polygon points="488,174 712,174 750,258 450,258" fill="url(#gold)" stroke="#fff" stroke-width="5"/>
+    <text x="600" y="216" fill="#fff" font-size="21">Direct Investments</text>
+    <polygon points="420,288 780,288 832,382 368,382" fill="#203d56" stroke="#fff" stroke-width="5"/>
+    <text x="600" y="342" fill="#fff" font-size="27">Alpha Level Two</text>
+    <polygon points="336,414 864,414 932,512 268,512" fill="#294961" stroke="#fff" stroke-width="5"/>
+    <text x="600" y="470" fill="#fff" font-size="28">Alpha Level One</text>
+    <polygon points="244,544 956,544 1040,650 160,650" fill="#31546c" stroke="#fff" stroke-width="5"/>
+    <text x="600" y="604" fill="#fff" font-size="30">Core Market Beta</text>
+    <polygon points="170,684 1030,684 1140,806 60,806" fill="#456a80" stroke="#fff" stroke-width="5"/>
+    <text x="600" y="752" fill="#fff" font-size="32">Foundational Investments</text>
   </g>
   <g font-family="Inter, Arial, sans-serif" fill="#ffffff" font-size="22" font-weight="700">
-    <path d="M1126 744V214" stroke="#c88b21" stroke-width="6" stroke-linecap="round"/>
-    <path d="M1126 214l-22 34M1126 214l22 34" stroke="#c88b21" stroke-width="6" stroke-linecap="round"/>
-    <text x="1152" y="482" transform="rotate(-90 1152 482)" text-anchor="middle" fill="#cbd6df">Increasing risk and return potential</text>
+    <path d="M1116 744V214" stroke="#c88b21" stroke-width="6" stroke-linecap="round"/>
+    <path d="M1116 214l-22 34M1116 214l22 34" stroke="#c88b21" stroke-width="6" stroke-linecap="round"/>
+    <text x="1142" y="482" transform="rotate(-90 1142 482)" text-anchor="middle" fill="#cbd6df">Increasing risk and return potential</text>
   </g>
 </svg>
