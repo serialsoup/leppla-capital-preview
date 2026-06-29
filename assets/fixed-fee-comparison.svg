@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
-  <title id="title">Four-year fixed fee comparison</title>
-  <desc id="desc">A four-year cumulative fees paid comparison showing a fixed 50 basis point fee lower than a variable one percent assets-under-management fee example.</desc>
+  <title id="title">Total fees charged over account lifetime</title>
+  <desc id="desc">A line chart comparing total fees charged over time under a fixed 0.50 percent annual fee and a variable 1.00 percent assets-under-management fee example. Lower fees charged is better.</desc>
   <defs>
     <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#ffffff"/>
@@ -14,11 +14,11 @@
   <circle cx="1000" cy="140" r="340" fill="#e9d9b9" opacity=".28"/>
   <circle cx="180" cy="820" r="300" fill="#d6e0e6" opacity=".38"/>
   <g filter="url(#shadow)">
-    <rect x="115" y="95" width="970" height="680" rx="10" fill="url(#paper)" stroke="#d8dde1" stroke-width="3"/>
+    <rect x="110" y="90" width="980" height="690" rx="10" fill="url(#paper)" stroke="#d8dde1" stroke-width="3"/>
   </g>
-  <g font-family="Inter, Arial, sans-serif" font-weight="800" letter-spacing="3" text-transform="uppercase">
-    <text x="165" y="155" fill="#082d52" font-size="30">Cumulative Fees Paid</text>
-    <text x="165" y="195" fill="#6a7883" font-size="19">Illustrative $1,000,000 portfolio growing 6% annually - lower is better</text>
+  <g font-family="Inter, Arial, sans-serif" font-weight="800" letter-spacing="3">
+    <text x="160" y="150" fill="#082d52" font-size="30">Total Fees Charged Over Account Lifetime</text>
+    <text x="160" y="190" fill="#6a7883" font-size="19">Illustrative $1,000,000 portfolio growing 6% annually - lower total fees are better</text>
   </g>
   <g transform="translate(170 250)" font-family="Inter, Arial, sans-serif">
     <path d="M0 430H860" stroke="#8ea0ad" stroke-width="4"/>
@@ -30,38 +30,35 @@
       <text x="-6" y="336" text-anchor="end">$15k</text>
       <text x="-6" y="435" text-anchor="end">$0</text>
     </g>
+    <path d="M70 382L285 346L500 309L760 250" fill="none" stroke="#c88b21" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M70 348L285 283L500 208L760 138" fill="none" stroke="#94a3ae" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <g>
+      <circle cx="70" cy="382" r="10" fill="#c88b21"/>
+      <circle cx="285" cy="346" r="10" fill="#c88b21"/>
+      <circle cx="500" cy="309" r="10" fill="#c88b21"/>
+      <circle cx="760" cy="250" r="10" fill="#c88b21"/>
+      <circle cx="70" cy="348" r="10" fill="#94a3ae"/>
+      <circle cx="285" cy="283" r="10" fill="#94a3ae"/>
+      <circle cx="500" cy="208" r="10" fill="#94a3ae"/>
+      <circle cx="760" cy="138" r="10" fill="#94a3ae"/>
+    </g>
     <g font-weight="800" text-anchor="middle">
-      <rect x="88" y="380" width="38" height="50" fill="#c88b21" rx="5"/>
-      <rect x="132" y="364" width="38" height="66" fill="#94a3ae" rx="5"/>
-      <text x="107" y="366" fill="#082d52" font-size="16">$5k</text>
-      <text x="151" y="350" fill="#596a76" font-size="16">$10k</text>
-      <text x="129" y="474" fill="#667580" font-size="22">Year 1</text>
-
-      <rect x="284" y="364" width="38" height="66" fill="#c88b21" rx="5"/>
-      <rect x="328" y="294" width="38" height="136" fill="#94a3ae" rx="5"/>
-      <text x="303" y="350" fill="#082d52" font-size="16">$10.3k</text>
-      <text x="347" y="280" fill="#596a76" font-size="16">$20.6k</text>
-      <text x="325" y="474" fill="#667580" font-size="22">Year 2</text>
-
-      <rect x="480" y="336" width="38" height="94" fill="#c88b21" rx="5"/>
-      <rect x="524" y="220" width="38" height="210" fill="#94a3ae" rx="5"/>
-      <text x="499" y="322" fill="#082d52" font-size="16">$15.9k</text>
-      <text x="543" y="206" fill="#596a76" font-size="16">$31.8k</text>
-      <text x="521" y="474" fill="#667580" font-size="22">Year 3</text>
-
-      <rect x="676" y="286" width="38" height="144" fill="#c88b21" rx="5"/>
-      <rect x="720" y="138" width="38" height="292" fill="#94a3ae" rx="5"/>
-      <text x="695" y="272" fill="#082d52" font-size="16">$21.9k</text>
-      <text x="739" y="124" fill="#596a76" font-size="16">$43.7k</text>
-      <text x="717" y="474" fill="#667580" font-size="22">Year 4</text>
+      <text x="70" y="474" fill="#667580" font-size="22">Year 1</text>
+      <text x="285" y="474" fill="#667580" font-size="22">Year 2</text>
+      <text x="500" y="474" fill="#667580" font-size="22">Year 3</text>
+      <text x="760" y="474" fill="#667580" font-size="22">Year 4</text>
+      <text x="760" y="232" fill="#082d52" font-size="18">$21.9k</text>
+      <text x="760" y="118" fill="#596a76" font-size="18">$43.7k</text>
+      <text x="640" y="218" fill="#082d52" font-size="23">Fixed fee 0.50%</text>
+      <text x="620" y="116" fill="#596a76" font-size="23">Variable fee 1.00% AUM</text>
     </g>
   </g>
   <g font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" fill="#52616c">
     <rect x="170" y="792" width="48" height="10" rx="5" fill="#c88b21"/>
-    <text x="235" y="803">Fixed fee: 0.50% annually</text>
+    <text x="235" y="803">Fixed fee: lower total fees charged</text>
     <rect x="170" y="832" width="48" height="10" rx="5" fill="#94a3ae"/>
-    <text x="235" y="843">Variable fee example: 1.00% AUM</text>
-    <text x="690" y="800" fill="#082d52" font-size="26">Approx. $21.8k less in cumulative fees</text>
-    <text x="690" y="832" fill="#6a7883" font-size="16">Illustrative only; actual portfolio values and fees vary.</text>
+    <text x="235" y="843">Variable fee example: fees rise as assets grow</text>
+    <text x="705" y="800" fill="#082d52" font-size="26">Lower line = less paid in fees</text>
+    <text x="705" y="832" fill="#6a7883" font-size="16">Illustrative only; actual portfolio values and fees vary.</text>
   </g>
 </svg>
