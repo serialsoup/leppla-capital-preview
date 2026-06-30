@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leppla Capital Classic Pyramid Logo Directions</title>
+    <meta
+      name="description"
+      content="A focused classic pyramid logo direction for Leppla Capital Management."
+    />
+    <style>
+      :root {
+        --navy: #082d52;
+        --deep: #061b31;
+        --gold: #c88b21;
+        --cream: #f5f4ef;
+        --paper: #ffffff;
+        --line: #d9dee2;
+        --muted: #617181;
+        --display: Georgia, "Times New Roman", serif;
+        --sans: "Libre Franklin", Arial, Helvetica, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: #111;
+        font-family: var(--sans);
+      }
+
+      .page {
+        max-width: 1380px;
+        margin: 0 auto;
+        padding: 54px clamp(18px, 4vw, 60px) 74px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+        gap: 42px;
+        align-items: end;
+        padding-bottom: 34px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .eyebrow,
+      .label,
+      .number {
+        color: var(--gold);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 12px 0 0;
+        color: var(--navy);
+        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+        font-size: clamp(48px, 7vw, 94px);
+        font-weight: 600;
+        line-height: 0.95;
+      }
+
+      .intro,
+      .note {
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.64;
+      }
+
+      .principles {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin: 28px 0 36px;
+      }
+
+      .principle {
+        padding: 18px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.76);
+      }
+
+      .principle strong {
+        display: block;
+        margin: 8px 0;
+        color: var(--navy);
+        font-size: 17px;
+      }
+
+      .principle p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.58;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .card {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--paper);
+        box-shadow: 0 18px 48px rgba(8, 45, 82, 0.08);
+      }
+
+      .stage {
+        display: grid;
+        place-items: center;
+        min-height: 370px;
+        padding: 38px;
+        background: #fff;
+      }
+
+      .stage.navy {
+        background: linear-gradient(135deg, var(--deep), var(--navy));
+      }
+
+      .stage.cream {
+        background: linear-gradient(135deg, #fbfaf6, #f0eee8);
+      }
+
+      .stage svg {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+      }
+
+      .body {
+        padding: 24px 26px 28px;
+        border-top: 1px solid #eef1f3;
+      }
+
+      .title-row {
+        display: flex;
+        gap: 12px;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        margin: 0;
+        color: var(--navy);
+        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1;
+      }
+
+      .body p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.62;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .chips span {
+        padding: 8px 10px;
+        border: 1px solid #dbe1e5;
+        color: var(--navy);
+        background: #f7f8f8;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .footer-note {
+        margin-top: 36px;
+        padding: 24px;
+        border-left: 5px solid var(--gold);
+        background: rgba(255, 255, 255, 0.78);
+      }
+
+      .footer-note p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      .wordmark {
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
+      }
+
+      .caps {
+        font-family: var(--sans);
+        font-weight: 800;
+        letter-spacing: 0.17em;
+      }
+
+      @media (max-width: 980px) {
+        .hero,
+        .principles,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .page {
+          padding-inline: 16px;
+        }
+
+        .stage {
+          min-height: 260px;
+          padding: 20px;
+        }
+
+        h2 {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Leppla Capital Management</p>
+          <h1>Classic pyramid direction</h1>
+        </div>
+        <p class="intro">
+          This follows the reference more directly: a bold pyramid above a serious serif wordmark.
+          The goal is to make it feel intentional and old-school, not like a generated icon set.
+        </p>
+      </section>
+
+      <section class="principles" aria-label="Design principles">
+        <article class="principle">
+          <span class="label">Keep</span>
+          <strong>One strong shape</strong>
+          <p>The pyramid should be blunt, simple, and confident. No internal tiers or diagram details.</p>
+        </article>
+        <article class="principle">
+          <span class="label">Fix</span>
+          <strong>Typography does the work</strong>
+          <p>The wordmark needs to carry the firm. The symbol should sit above it quietly.</p>
+        </article>
+        <article class="principle">
+          <span class="label">Watch</span>
+          <strong>Pyramid-scheme risk</strong>
+          <p>The safer versions use a single solid silhouette or a flattened cap, not stacked levels.</p>
+        </article>
+      </section>
+
+      <section class="grid" aria-label="Classic pyramid logo concepts">
+        <article class="card">
+          <div class="stage">
+            <svg viewBox="0 0 640 300" role="img" aria-label="Classic black pyramid logo">
+              <path d="M320 38 496 174H144z" fill="#000"/>
+              <text x="320" y="244" text-anchor="middle" fill="#000" class="wordmark" font-size="58">Leppla Capital</text>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title-row">
+              <h2>Reference Clean-Up</h2>
+              <span class="number">01</span>
+            </div>
+            <p>The closest read to your screenshot: black pyramid, serif wordmark, no extra explanation. It is stark and memorable.</p>
+            <div class="chips"><span>Closest reference</span><span>Bold</span><span>Old-school</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="stage cream">
+            <svg viewBox="0 0 640 300" role="img" aria-label="Navy pyramid logo with refined spacing">
+              <path d="M320 42 482 168H158z" fill="#082d52"/>
+              <text x="320" y="236" text-anchor="middle" fill="#082d52" class="wordmark" font-size="54">Leppla Capital</text>
+              <text x="320" y="268" text-anchor="middle" fill="#c88b21" class="caps" font-size="13">MANAGEMENT</text>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title-row">
+              <h2>Navy House Style</h2>
+              <span class="number">02</span>
+            </div>
+            <p>The same basic concept, pulled into the site palette. This is probably the easiest version to integrate into the current website.</p>
+            <div class="chips"><span>Brand fit</span><span>Serious</span><span>Usable</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="stage">
+            <svg viewBox="0 0 640 300" role="img" aria-label="Low pyramid cap logo">
+              <path d="M320 64 470 166H170z" fill="#082d52"/>
+              <path d="M206 184h228" stroke="#c88b21" stroke-width="9" stroke-linecap="butt"/>
+              <text x="320" y="246" text-anchor="middle" fill="#082d52" class="wordmark" font-size="54">Leppla Capital</text>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title-row">
+              <h2>Grounded Cap</h2>
+              <span class="number">03</span>
+            </div>
+            <p>A slightly lower, more architectural silhouette with a gold base line. It feels less mystical and more institutional.</p>
+            <div class="chips"><span>Less pyramid-y</span><span>Foundation cue</span><span>Balanced</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="stage navy">
+            <svg viewBox="0 0 640 300" role="img" aria-label="White pyramid on navy logo">
+              <path d="M320 44 488 170H152z" fill="#fff"/>
+              <text x="320" y="238" text-anchor="middle" fill="#fff" class="wordmark" font-size="54">Leppla Capital</text>
+              <path d="M218 260h204" stroke="#c88b21" stroke-width="4"/>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title-row">
+              <h2>Reverse Mark</h2>
+              <span class="number">04</span>
+            </div>
+            <p>A dark-background version. If this direction works, the reverse mark needs to look just as intentional as the white-background one.</p>
+            <div class="chips"><span>Website header</span><span>Premium</span><span>High contrast</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="stage">
+            <svg viewBox="0 0 640 300" role="img" aria-label="Compact pyramid and wordmark logo">
+              <path d="M320 52 448 160H192z" fill="#082d52"/>
+              <text x="320" y="230" text-anchor="middle" fill="#082d52" class="wordmark" font-size="48">Leppla Capital</text>
+              <text x="320" y="262" text-anchor="middle" fill="#082d52" class="caps" font-size="12">PRIVATE WEALTH MANAGEMENT</text>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title-row">
+              <h2>Compact Advisory</h2>
+              <span class="number">05</span>
+            </div>
+            <p>A slightly smaller pyramid and more advisory context beneath. This makes the symbol less dominant and the firm feel more mature.</p>
+            <div class="chips"><span>Wordmark-led</span><span>Professional</span><span>Safer</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="stage cream">
+            <svg viewBox="0 0 640 300" role="img" aria-label="Editorial Leppla Capital pyramid logo">
+              <path d="M320 44 468 164H172z" fill="#000"/>
+              <text x="320" y="238" text-anchor="middle" fill="#000" class="wordmark" font-size="52">Leppla Capital</text>
+              <text x="320" y="268" text-anchor="middle" fill="#5c6470" class="caps" font-size="12">FIDUCIARY INVESTMENT MANAGEMENT</text>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title-row">
+              <h2>Editorial Black</h2>
+              <span class="number">06</span>
+            </div>
+            <p>A more finished version of the black reference with a quieter descriptor. It has the most vintage-finance feel.</p>
+            <div class="chips"><span>Classic</span><span>Minimal</span><span>Distinct</span></div>
+          </div>
+        </article>
+      </section>
+
+      <aside class="footer-note">
+        <p>
+          My honest read: this is a better logo territory than the previous abstract marks. I would start
+          with 02 or 05 for the website because they preserve the reference while reducing the “pyramid
+          scheme” read. 01 is useful as the pure north star, but may be too blunt for a live advisory brand.
+        </p>
+      </aside>
+    </main>
+  </body>
+</html>
