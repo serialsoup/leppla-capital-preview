@@ -9152,3 +9152,40 @@ textarea {
     font-size: 10px;
   }
 }
+
+/* Strata logo implementation */
+.figma-home .figma-brand span {
+  display: none;
+}
+
+.figma-home .figma-brand img,
+.figma-subpage .brand img {
+  width: clamp(190px, 18vw, 248px) !important;
+  height: auto !important;
+}
+
+.figma-home .figma-header,
+.figma-subpage .site-header {
+  min-height: 78px;
+}
+
+.figma-footer img,
+.figma-subpage .site-footer img,
+.site-footer img {
+  width: clamp(190px, 24vw, 270px) !important;
+  height: auto !important;
+}
+
+@media (max-width: 760px) {
+  .figma-home .figma-brand img,
+  .figma-subpage .brand img {
+    width: 172px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .figma-home .figma-brand img,
+  .figma-subpage .brand img {
+    width: 148px !important;
+  }
+}

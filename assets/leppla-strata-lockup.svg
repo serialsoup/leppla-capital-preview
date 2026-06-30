@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 470" width="640" height="470" role="img" aria-label="Leppla Capital">
+  <defs>
+    
+    <clipPath id="strataLockup"><polygon points="150,4 296,166 4,166"></polygon></clipPath>
+  </defs>
+  <g transform="translate(170,46)">
+    <g clip-path="url(#strataLockup)">
+      <rect x="0" y="136" width="300" height="30" fill="#8B8270"></rect>
+      <rect x="0" y="103" width="300" height="30" fill="#6E6655"></rect>
+      <rect x="0" y="70" width="300" height="30" fill="#534C40"></rect>
+      <rect x="0" y="37" width="300" height="30" fill="#3A352C"></rect>
+      <rect x="0" y="4" width="300" height="30" fill="#211E18"></rect>
+    </g>
+  </g>
+  <text x="320" y="400" text-anchor="middle" font-family="&#39;Newsreader&#39;, Georgia, &#39;Times New Roman&#39;, serif" font-size="80" font-weight="500" fill="#211E18">Leppla Capital</text>
+</svg>

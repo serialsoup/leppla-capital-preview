@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 170" width="300" height="170" role="img" aria-label="Leppla Capital">
+  <defs>
+    <clipPath id="strata"><polygon points="150,4 296,166 4,166"></polygon></clipPath>
+  </defs>
+  <g clip-path="url(#strata)">
+    <rect x="0" y="136" width="300" height="30" fill="#8B8270"></rect>
+    <rect x="0" y="103" width="300" height="30" fill="#6E6655"></rect>
+    <rect x="0" y="70" width="300" height="30" fill="#534C40"></rect>
+    <rect x="0" y="37" width="300" height="30" fill="#3A352C"></rect>
+    <rect x="0" y="4" width="300" height="30" fill="#211E18"></rect>
+  </g>
+</svg>
