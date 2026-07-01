@@ -9350,3 +9350,37 @@ textarea {
     height: auto !important;
   }
 }
+
+/* Unified header button sizing */
+@media (min-width: 981px) {
+  .figma-home .figma-nav a:not(.figma-nav-cta),
+  .figma-subpage .site-nav a:not(.nav-cta) {
+    box-sizing: border-box;
+    display: inline-flex !important;
+    align-items: center;
+    min-height: 36px;
+    padding: 0 !important;
+    font-size: 12px !important;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.45;
+    white-space: nowrap;
+  }
+
+  .figma-home .figma-nav-cta,
+  .figma-subpage .nav-cta {
+    box-sizing: border-box;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 103px;
+    min-height: 36px !important;
+    padding: 10px 20px !important;
+    border-radius: 999px;
+    font-size: 10.5px !important;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1.45;
+    white-space: nowrap;
+  }
+}
