@@ -9300,3 +9300,16 @@ textarea {
     width: 148px !important;
   }
 }
+
+/* Unified header color */
+.figma-home .figma-header,
+.figma-subpage .site-header {
+  background: #082d52 !important;
+}
+
+@media (max-width: 1020px) {
+  .figma-home .figma-nav,
+  .figma-subpage .site-nav {
+    background: #082d52 !important;
+  }
+}
