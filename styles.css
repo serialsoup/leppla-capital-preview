@@ -9311,6 +9311,7 @@ textarea {
   .figma-home .figma-header,
   .figma-subpage .site-header {
     box-sizing: border-box;
+    gap: 26px !important;
     height: 90px !important;
     min-height: 90px !important;
     padding: 16px clamp(22px, 4vw, 56px) !important;
@@ -9325,6 +9326,7 @@ textarea {
   .figma-home .figma-nav,
   .figma-subpage .site-nav {
     align-items: center;
+    gap: 25.92px !important;
   }
 }
 
