@@ -8622,8 +8622,8 @@ textarea {
   padding: clamp(52px, 7vw, 96px) clamp(24px, 6vw, 86px);
   color: #fff;
   background:
-    linear-gradient(90deg, rgba(5, 17, 29, 0.9), rgba(5, 17, 29, 0.48) 52%, rgba(5, 17, 29, 0.2)),
-    url("assets/hero-advisor.png") 64% center / cover no-repeat;
+    linear-gradient(90deg, rgba(5, 17, 29, 0.94), rgba(5, 17, 29, 0.7) 46%, rgba(5, 17, 29, 0.22)),
+    url("assets/golden-gate-bridge.png") 58% center / cover no-repeat;
 }
 
 .home-intro > div {
@@ -9174,6 +9174,51 @@ textarea {
 .site-footer img {
   width: clamp(190px, 24vw, 270px) !important;
   height: auto !important;
+}
+
+/* Footer polish */
+.figma-footer,
+.figma-subpage .site-footer,
+.site-footer {
+  align-items: start;
+  padding-top: 36px;
+  padding-bottom: 34px;
+}
+
+.figma-footer > div,
+.figma-subpage .site-footer > div,
+.site-footer > div {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  width: max-content;
+  max-width: 280px;
+  text-align: center;
+}
+
+.figma-footer > div p,
+.figma-subpage .site-footer > div p,
+.site-footer > div p {
+  margin: 8px 0 0;
+  color: #5f6c76;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.figma-footer nav,
+.figma-subpage .site-footer nav,
+.site-footer nav {
+  align-content: start;
+  gap: 16px clamp(24px, 4vw, 48px) !important;
+}
+
+.figma-footer .legal,
+.figma-subpage .site-footer .legal,
+.site-footer .legal {
+  margin-top: 18px;
 }
 
 @media (max-width: 760px) {
