@@ -9307,9 +9307,46 @@ textarea {
   background: #082d52 !important;
 }
 
+@media (min-width: 981px) {
+  .figma-home .figma-header,
+  .figma-subpage .site-header {
+    box-sizing: border-box;
+    height: 90px !important;
+    min-height: 90px !important;
+    padding: 16px clamp(22px, 4vw, 56px) !important;
+  }
+
+  .figma-home .figma-brand img,
+  .figma-subpage .brand img {
+    width: 248px !important;
+    height: auto !important;
+  }
+
+  .figma-home .figma-nav,
+  .figma-subpage .site-nav {
+    align-items: center;
+  }
+}
+
 @media (max-width: 1020px) {
   .figma-home .figma-nav,
   .figma-subpage .site-nav {
     background: #082d52 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .figma-home .figma-header,
+  .figma-subpage .site-header {
+    box-sizing: border-box;
+    height: 70px !important;
+    min-height: 70px !important;
+    padding: 12px 20px !important;
+  }
+
+  .figma-home .figma-brand img,
+  .figma-subpage .brand img {
+    width: 172px !important;
+    height: auto !important;
   }
 }
