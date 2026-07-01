@@ -8622,7 +8622,7 @@ textarea {
 
 .home-intro {
   display: grid;
-  min-height: 500px;
+  min-height: calc(100svh - 137px);
   align-items: center;
   padding: clamp(52px, 7vw, 96px) clamp(24px, 6vw, 86px);
   color: #fff;
@@ -9069,7 +9069,7 @@ textarea {
 
 @media (max-width: 760px) {
   .home-intro {
-    min-height: 440px;
+    min-height: calc(100svh - 88px);
     padding: 64px 20px;
     background-position: 58% center;
   }
