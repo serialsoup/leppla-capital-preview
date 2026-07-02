@@ -9388,6 +9388,13 @@ textarea {
 }
 
 /* About page doc update */
+.figma-subpage:has(.about-hero-v3) .site-header {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+}
+
 .figma-subpage:has(.about-hero-v3) .about-hero-v3 {
   display: none;
 }
@@ -9395,8 +9402,8 @@ textarea {
 .figma-subpage:has(.about-hero-v3) .about-pyramid-widget {
   width: 100%;
   margin: 0;
-  min-height: 100vh;
-  padding: calc(90px + clamp(20px, 2.5vw, 34px)) 0 clamp(20px, 3vw, 36px);
+  min-height: calc(100vh - 90px);
+  padding: clamp(20px, 2.6vw, 34px) 0 clamp(20px, 3vw, 36px);
   background:
     linear-gradient(180deg, #fff 0%, #f7f4ed 58%, #fff 100%);
 }
@@ -9828,7 +9835,7 @@ textarea {
 @media (max-width: 620px) {
   .figma-subpage:has(.about-hero-v3) .about-pyramid-widget {
     min-height: 0;
-    padding-top: 92px;
+    padding-top: 34px;
   }
 
   .figma-subpage:has(.about-hero-v3) .about-pyramid-intro {
