@@ -1,0 +1,633 @@
+<title>The Securities Investment Pyramid&trade; &mdash; Leppla Capital</title>
+<style>
+  :root{
+    --ivory:#F1EDE3;
+    --ivory-deep:#E7E1D2;
+    --ink:#16283C;
+    --ink-soft:#3D4E63;
+    --tan:#C2996B;
+    --tan-deep:#A87E4F;
+    --slate:#33517A;
+    --sky:#8FA8CF;
+    --line:rgba(22,40,60,.14);
+    --serif:"Iowan Old Style", Georgia, "Times New Roman", serif;
+    --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  .wrap{max-width:1160px;margin:0 auto;padding:48px 28px 40px;}
+
+  /* ---------- header ---------- */
+  header{border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:8px;}
+  .eyebrow{
+    font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--tan-deep);font-weight:600;margin:0 0 14px;
+  }
+  h1{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(30px,4.2vw,46px);line-height:1.12;
+    margin:0 0 14px;text-wrap:balance;letter-spacing:-.01em;
+  }
+  h1 .tm{font-size:.45em;vertical-align:super;}
+  .lede{
+    max-width:62ch;color:var(--ink-soft);
+    font-size:15.5px;line-height:1.65;margin:0;
+  }
+
+  /* ---------- risk profile strip ---------- */
+  .profiles{
+    display:flex;flex-direction:column;gap:10px;
+    padding:20px 0 4px;
+  }
+  .profiles-top{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;}
+  .profiles-top .splitbar{margin-left:auto;}
+  .profiles-label{
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--ink-soft);font-weight:600;white-space:nowrap;
+  }
+  .profile-name{
+    font-family:var(--serif);font-size:19px;color:var(--ink);
+    min-width:210px;
+  }
+  .slider-wrap{position:relative;flex:1;min-width:280px;padding-top:4px;}
+  .ticks{
+    position:absolute;top:12px;left:9px;right:9px;
+    display:flex;justify-content:space-between;pointer-events:none;
+  }
+  .ticks span{
+    width:5px;height:5px;border-radius:50%;
+    background:var(--ink-soft);opacity:.45;
+  }
+  input[type=range]{
+    -webkit-appearance:none;appearance:none;
+    width:100%;height:28px;background:transparent;margin:0;
+    cursor:pointer;display:block;
+  }
+  input[type=range]::-webkit-slider-runnable-track{
+    height:4px;border-radius:2px;
+    background:linear-gradient(90deg,var(--tan) 0%,var(--slate) 100%);
+  }
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;appearance:none;
+    width:18px;height:18px;border-radius:50%;
+    background:var(--ink);border:3px solid var(--ivory);
+    box-shadow:0 1px 4px rgba(22,40,60,.35);
+    margin-top:-7px;
+  }
+  input[type=range]::-moz-range-track{
+    height:4px;border-radius:2px;
+    background:linear-gradient(90deg,var(--tan) 0%,var(--slate) 100%);
+  }
+  input[type=range]::-moz-range-thumb{
+    width:12px;height:12px;border-radius:50%;
+    background:var(--ink);border:3px solid var(--ivory);
+    box-shadow:0 1px 4px rgba(22,40,60,.35);
+  }
+  input[type=range]:focus-visible{outline:2px solid var(--tan-deep);outline-offset:4px;}
+  .slab:focus-visible,.lvl-btn:focus-visible{
+    outline:2px solid var(--tan-deep);outline-offset:2px;
+  }
+  .slider-ends{
+    display:flex;justify-content:space-between;
+    font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-soft);margin-top:2px;
+  }
+
+  .splitbar{
+    display:flex;align-items:center;gap:12px;flex:1;min-width:260px;
+  }
+  .splitbar .bar{
+    flex:1;height:10px;border-radius:5px;overflow:hidden;
+    display:flex;background:var(--ivory-deep);
+  }
+  .splitbar .fi{background:var(--tan);height:100%;transition:width .5s cubic-bezier(.4,0,.2,1);}
+  .splitbar .eq{background:var(--slate);height:100%;transition:width .5s cubic-bezier(.4,0,.2,1);}
+  .split-read{
+    font-size:12px;color:var(--ink-soft);white-space:nowrap;
+    font-variant-numeric:tabular-nums;
+  }
+  .split-read b{color:var(--ink);font-weight:600;}
+
+  /* ---------- main grid ---------- */
+  main{
+    display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+    gap:36px;align-items:stretch;margin-top:8px;
+  }
+
+  /* ---------- 3D scene ---------- */
+  .stage{
+    position:relative;
+    border:1px solid var(--line);border-radius:6px;
+    background:
+      radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,.55), rgba(255,255,255,0) 60%),
+      linear-gradient(var(--ivory), var(--ivory-deep));
+    min-height:520px;
+    overflow:hidden;
+  }
+  .scene{
+    position:absolute;inset:0;
+    perspective:1400px;
+  }
+  .pyramid{
+    position:absolute;left:50%;top:62%;
+    transform-style:preserve-3d;
+    will-change:transform;
+  }
+  .slab{
+    position:absolute;left:0;top:0;
+    transform-style:preserve-3d;
+    transition:transform .5s cubic-bezier(.4,0,.2,1);
+    cursor:pointer;
+  }
+  .slab .face{
+    position:absolute;left:0;top:0;
+    backface-visibility:hidden;
+    transition:filter .35s, height .5s cubic-bezier(.4,0,.2,1),
+               top .5s cubic-bezier(.4,0,.2,1);
+  }
+  /* effects sit on the flat faces, never on the preserve-3d group
+     (group opacity/filter would flatten the 3D children); faces stay
+     fully opaque so layers never show through each other */
+  .slab.dim .face{filter:saturate(.55) brightness(1.07);}
+  .slab.hot .face{filter:brightness(1.07);}
+  .slab.sel .face{
+    filter:brightness(1.09) saturate(1.12);
+    animation:layerblink .65s ease-out;
+  }
+  @keyframes layerblink{
+    0%{filter:brightness(1) saturate(1);}
+    35%{filter:brightness(1.38) saturate(1.25);}
+    100%{filter:brightness(1.09) saturate(1.12);}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .slab.sel .face{animation:none;}
+  }
+  .shadow{
+    position:absolute;left:50%;top:50%;
+    border-radius:50%;
+    background:radial-gradient(closest-side, rgba(22,40,60,.28), rgba(22,40,60,0));
+    transform:translate(-50%,-50%) rotateX(90deg);
+  }
+  .hint{
+    position:absolute;left:0;right:0;bottom:14px;text-align:center;
+    font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-soft);opacity:.75;pointer-events:none;
+  }
+  .stage-title{
+    position:absolute;top:16px;left:18px;
+    font-family:var(--serif);font-size:14px;color:var(--ink-soft);
+    font-style:italic;pointer-events:none;
+  }
+  .readup{
+    position:absolute;top:16px;right:18px;display:flex;align-items:center;gap:8px;
+    font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);
+    pointer-events:none;
+  }
+  .readup svg{display:block;}
+
+  /* ---------- detail panel ---------- */
+  .panel{
+    display:flex;flex-direction:column;
+    border-top:3px solid var(--ink);
+    padding-top:22px;min-height:520px;box-sizing:border-box;
+  }
+  .lvl-nav{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap;}
+  .lvl-btn{
+    width:34px;height:34px;border-radius:50%;
+    border:1px solid var(--line);background:transparent;
+    font-family:var(--sans);font-size:13px;color:var(--ink-soft);
+    cursor:pointer;transition:all .18s;padding:0;
+  }
+  .lvl-btn:hover{border-color:var(--ink);color:var(--ink);}
+  .lvl-btn.on{color:#fff;}
+  .lvl-btn.on:not(.overview-btn){
+    background:var(--btn-bg,var(--ink));
+    border-color:var(--btn-bg,var(--ink));
+    color:#fff;
+  }
+  .lvl-btn.overview-btn:not(.on){
+    background:transparent;
+    border-color:var(--line);
+    color:var(--ink-soft);
+  }
+  .lvl-btn.overview-btn{width:auto;border-radius:999px;padding:0 14px;}
+  .lvl-btn.overview-btn.on{background:var(--ink);border-color:var(--ink);}
+
+  .badge{
+    display:inline-block;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;
+    font-weight:600;padding:5px 10px;border-radius:3px;margin-bottom:14px;
+  }
+  .panel h2{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(24px,2.6vw,31px);line-height:1.15;
+    margin:0 0 14px;text-wrap:balance;
+  }
+  .panel .body{color:var(--ink-soft);font-size:14.5px;line-height:1.7;max-width:60ch;}
+  .panel .body p{margin:0 0 13px;}
+  .panel .body strong{color:var(--ink);font-weight:600;}
+
+  .chips-label{
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--ink-soft);font-weight:600;margin:20px 0 10px;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:7px;}
+  .chip{
+    font-size:12px;padding:6px 11px;border-radius:3px;
+    background:#fff;border:1px solid var(--line);color:var(--ink);
+    font-variant-numeric:tabular-nums;
+  }
+  .chip small{color:var(--ink-soft);margin-left:5px;}
+
+  .alloc{
+    margin-top:auto;padding-top:20px;
+    border-top:1px solid var(--line);
+    display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  }
+  .alloc .num{
+    font-family:var(--serif);font-size:40px;line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .alloc .cap{font-size:12.5px;color:var(--ink-soft);line-height:1.5;max-width:34ch;}
+
+  footer{
+    margin-top:44px;padding-top:18px;border-top:1px solid var(--line);
+    font-size:11.5px;color:var(--ink-soft);line-height:1.6;max-width:100ch;
+  }
+
+  @media (max-width:900px){
+    main{grid-template-columns:1fr;}
+    .stage{min-height:420px;}
+    .panel{min-height:0;}
+    .alloc{margin-top:24px;}
+  }
+  @media (max-width:560px){
+    .stage-title{
+      left:16px;
+      max-width:145px;
+      font-size:12px;
+      line-height:1.2;
+    }
+    .readup{
+      top:18px;
+      right:16px;
+      gap:5px;
+      font-size:9px;
+      letter-spacing:.14em;
+    }
+  }
+  @media (prefers-reduced-motion:reduce){
+    .slab,.splitbar .fi,.splitbar .eq{transition:none;}
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Leppla Capital</p>
+    <h1>The Securities Investment Pyramid<span class="tm">&trade;</span></h1>
+    <p class="lede">We construct portfolios from the bottom up &mdash; a strong foundation of high-quality
+    core holdings, followed by thoughtfully selected alpha-oriented opportunities that align with your
+    risk profile and objectives. The allocation percentages adapt to each client; the discipline
+    remains constant.</p>
+  </header>
+
+  <div class="profiles" role="group" aria-label="Risk tolerance profile">
+    <div class="profiles-top">
+      <span class="profiles-label">Risk profile</span>
+      <span class="profile-name" id="profileName">Balanced</span>
+      <div class="splitbar">
+        <div class="bar" aria-hidden="true"><div class="fi" id="fiBar"></div><div class="eq" id="eqBar"></div></div>
+        <div class="split-read" id="splitRead"></div>
+      </div>
+    </div>
+    <div class="slider-wrap">
+      <div class="ticks" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <input type="range" id="profileSlider" min="0" max="6" step="1" value="3"
+        aria-label="Risk tolerance profile" aria-valuetext="Balanced">
+      <div class="slider-ends"><span>Very Conservative</span><span>Very Aggressive</span></div>
+    </div>
+  </div>
+
+  <main>
+    <div class="stage" id="stage">
+      <div class="stage-title">Securities Investment Pyramid&trade;</div>
+      <div class="readup">
+        <svg width="10" height="26" viewBox="0 0 10 26" fill="none" aria-hidden="true">
+          <path d="M5 25 V3 M1.5 6.5 L5 2 L8.5 6.5" stroke="#3D4E63" stroke-width="1.4" fill="none"/>
+        </svg>
+        Read bottom&nbsp;up
+      </div>
+      <div class="scene"><div class="pyramid" id="pyramid"></div></div>
+      <div class="hint">Click a layer to explore it</div>
+    </div>
+
+    <aside class="panel" aria-live="polite">
+      <div class="lvl-nav" id="lvlNav"></div>
+      <span class="badge" id="pBadge"></span>
+      <h2 id="pTitle"></h2>
+      <div class="body" id="pBody"></div>
+      <div id="pChipsWrap">
+        <p class="chips-label" id="pChipsLabel"></p>
+        <div class="chips" id="pChips"></div>
+      </div>
+      <div class="alloc" id="pAlloc"></div>
+    </aside>
+  </main>
+
+  <footer>
+    The Securities Investment Pyramid&trade; is a proprietary Leppla Capital methodology by which investors
+    can assess and implement their own investment strategies. Investment loss in the securities markets is
+    inevitable; there is no guarantee the Pyramid will ensure principal safety. Holdings shown are examples
+    drawn from Leppla Capital model portfolios and are illustrative only &mdash; not a recommendation to buy or
+    sell any security. Investors should research direct investments and make their own choices.
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  /* ============ data ============ */
+  var LAYERS = [ // bottom -> top
+    {
+      id:"fi", short:"Fixed Income", section:"Foundation",
+      title:"Foundational &mdash; Fixed Income",
+      badgeBg:"#C2996B", badgeFg:"#fff",
+      colors:{top:"#B8935F", front:"#9C7443", side:"#7E5C34", back:"#6F5230", edge:"#5E451F"},
+      body:"<p>The base of every pyramid: <strong>investment-grade fixed income</strong>. These holdings are designed for capital preservation and steady income &mdash; they anchor the portfolio so the layers above can take measured risk.</p><p>The mix runs from risk-free U.S. Treasuries and inflation-protected bonds to top-rated corporate credit, with duration chosen on the basis of relative yield to maturity. More conservative clients hold more of the pyramid here; the most aggressive hold the least.</p>",
+      chipsLabel:"Examples from LC model portfolios",
+      chips:[["U.S. T-Notes","2&ndash;5 yr ladder"],["VTIP","inflation-protected"],["VGSH","short treasuries"],["IG corporates","Apple, J&J, JPMorgan"],["PIMIX","active manager"],["SHYG","short-term high yield"]],
+      balanced:[50,"Half of the illustrative $1M Balanced portfolio sits in the fixed-income foundation."]
+    },
+    {
+      id:"beta", short:"Market Beta", section:"Foundation",
+      title:"Foundational &mdash; Core Market Beta",
+      badgeBg:"#D9B584", badgeFg:"#42301A",
+      colors:{top:"#EBD9B8", front:"#DDC49A", side:"#C4A878", back:"#B69A6A", edge:"#8F7443"},
+      body:"<p><strong>Market-beta equities</strong> &mdash; low-expense-ratio ETFs designed to mirror the general securities markets, up and down, knowing that over time the market is up.</p><p>These belong in every portfolio. Broad index funds across large, mid and small cap, plus international exposure, capture the market's long-run growth without single-name or single-sector risk.</p>",
+      chipsLabel:"Examples from LC model portfolios",
+      chips:[["VOO","S&P 500"],["QQQM","Nasdaq 100"],["VXF","mid / small cap"],["SCHD","dividend equities"],["VEA","developed international"]],
+      balanced:[10,"of the illustrative $1M Balanced portfolio &mdash; the equity core the alpha layers build on."]
+    },
+    {
+      id:"a1", short:"Alpha Level 1", section:"Alpha",
+      title:"Alpha Level One &mdash; Sectors &amp; Asset Classes",
+      badgeBg:"#33517A", badgeFg:"#fff",
+      colors:{top:"#31517E", front:"#243D60", side:"#1A2E4A", back:"#172942", edge:"#101E33"},
+      body:"<p>The first alpha layer <strong>tilts the portfolio toward where we see relative value</strong>, using two toolkits: the eleven S&P sector ETFs (technology, energy, utilities, staples&hellip;) and traditional asset-class ETFs on the value-to-growth spectrum.</p><p>Percentages are divided as deemed appropriate on the basis of risk and relative return &mdash; this is where portfolio construction starts expressing a view, while staying diversified inside each fund.</p>",
+      chipsLabel:"Examples from LC model portfolios",
+      chips:[["XLE","energy sector"],["XLK","technology sector"],["XLU","utilities"],["XLP","consumer staples"],["IEFA","intl developed"],["RZG","small-cap growth"]],
+      balanced:[15,"of the illustrative $1M Balanced portfolio, spread across sector and asset-class ETFs."]
+    },
+    {
+      id:"a2", short:"Alpha Level 2", section:"Alpha",
+      title:"Alpha Level Two &mdash; Sub-Sectors &amp; Themes",
+      badgeBg:"#5674A3", badgeFg:"#fff",
+      colors:{top:"#6988B8", front:"#4F6D9E", side:"#3E577F", back:"#374E73", edge:"#2C3F5D"},
+      body:"<p>A sharper set of tilts: <strong>sub-sector, specialty and thematic ETFs</strong>. Where Alpha Level One buys \"health care,\" this layer can buy biotech; where Level One buys \"industrials,\" this layer can buy aerospace &amp; defense.</p><p>Higher potential return, higher volatility &mdash; so it sits nearer the top and is sized accordingly. Still fund-based, so risk is spread across many names within each theme.</p>",
+      chipsLabel:"Examples from LC model portfolios",
+      chips:[["QTUM","quantum &amp; AI"],["EUAD","European defense"],["EZU","Eurozone"],["XBI","biotech"],["SOXX","semiconductors"],["GDX","gold miners"]],
+      balanced:[15,"of the illustrative $1M Balanced portfolio, in focused thematic funds."]
+    },
+    {
+      id:"de", short:"Direct Equity", section:"Direct Investments",
+      title:"Direct Equity Investments",
+      badgeBg:"#8FA8CF", badgeFg:"#1B2B42",
+      colors:{top:"#C0D0E8", front:"#A2B8D8", side:"#8AA1C4", back:"#7E95B8", edge:"#5F7699"},
+      body:"<p>The apex: <strong>individual stocks held directly</strong> &mdash; the highest-conviction, highest-risk slice of the pyramid, deliberately kept smallest so no single name can drive the portfolio.</p><p>Positions are diversified across sectors and paired against the layers below so risk doesn't compound. Suggested names are researched by Leppla Capital, but investors should research direct investments and make their own choices.</p>",
+      chipsLabel:"Examples from LC model portfolios",
+      chips:[["MU","semiconductors / AI"],["BMY","pharma"],["UNCY","biotech"],["PWP","investment banking"],["NVDA","suggested"],["CAT","suggested"],["GS","suggested"]],
+      balanced:[10,"of the illustrative $1M Balanced portfolio, across a handful of researched names."]
+    }
+  ];
+
+  var PROFILES = [
+    ["Very Conservative",100],["Conservative",80],["Moderately Conservative",60],
+    ["Balanced",50],["Moderately Aggressive",40],["Aggressive",20],["Very Aggressive",0]
+  ];
+
+  var OVERVIEW = {
+    badgeBg:"#16283C", badgeFg:"#fff", section:"The Methodology",
+    title:"Read it from the bottom up",
+    body:"<p>The Pyramid is divided into three sections. The <strong>Foundation</strong> &mdash; investment-grade fixed income and market-beta equities &mdash; belongs in every portfolio. Above it, two levels of <strong>Alpha investments</strong> tilt toward sectors, asset classes and themes. At the top, <strong>Direct Investments</strong> hold individual stocks.</p><p>Investment risk increases from the pyramid's base to its top, so each layer is sized to your risk tolerance. Choose a risk profile above to see how the fixed-income foundation grows or shrinks, and click any layer of the pyramid to learn what it does.</p>",
+    chipsLabel:"", chips:[], balanced:null
+  };
+
+  /* ============ 3D construction ============ */
+  var pyramidEl = document.getElementById("pyramid");
+  var stage = document.getElementById("stage");
+  var GAP = 10;
+  var geoms = [ // bottom -> top footprint (W = D, square plan)
+    {w:380,d:380},{w:312,d:312},{w:248,d:248},{w:188,d:188},{w:132,d:132}
+  ];
+  var slabEls = [];
+
+  function makeFace(w,h,bg){
+    var f = document.createElement("div");
+    f.className = "face";
+    f.style.width = w+"px"; f.style.height = h+"px";
+    f.style.background = bg;
+    return f;
+  }
+
+  // shadow under pyramid
+  var sh = document.createElement("div");
+  sh.className = "shadow";
+  sh.style.width = "460px"; sh.style.height = "460px";
+  sh.style.transform = "translate(-50%,-50%) rotateX(90deg) translateZ(-6px)";
+  pyramidEl.appendChild(sh);
+
+  var slabParts = []; // per-slab face refs so layout() can set true pixel heights
+  LAYERS.forEach(function(L,i){
+    var g = geoms[i], c = L.colors;
+    var slab = document.createElement("div");
+    slab.className = "slab";
+    slab.setAttribute("role","button");
+    slab.setAttribute("tabindex","0");
+    slab.setAttribute("aria-label", L.short + " \u2014 level " + (i+1) + " of 5");
+    /* Group origin sits at the slab's bottom-center. Faces are built at
+       their true pixel size (no scaleY) so edges render crisp. */
+    var front = makeFace(g.w, 10, c.front);
+    front.style.left = (-g.w/2)+"px";
+    front.style.transform = "translateZ("+(g.d/2)+"px)";
+    var back = makeFace(g.w, 10, c.back);
+    back.style.left = (-g.w/2)+"px";
+    back.style.transform = "rotateY(180deg) translateZ("+(g.d/2)+"px)";
+    var lf = makeFace(g.d, 10, c.side);
+    lf.style.left = (-g.d/2)+"px";
+    lf.style.transform = "rotateY(-90deg) translateZ("+(g.w/2)+"px)";
+    var rt = makeFace(g.d, 10, c.side);
+    rt.style.left = (-g.d/2)+"px";
+    rt.style.transform = "rotateY(90deg) translateZ("+(g.w/2)+"px)";
+    var tp = makeFace(g.w, g.d, c.top);
+    tp.style.left = (-g.w/2)+"px";
+    tp.style.top = (-g.d/2)+"px";
+    tp.style.boxShadow = "inset 0 0 0 1.5px "+c.edge;
+    var bt = makeFace(g.w, g.d, c.back);
+    bt.style.left = (-g.w/2)+"px";
+    bt.style.top = (-g.d/2)+"px";
+    bt.style.transform = "rotateX(-90deg)";
+    [front,back,lf,rt,tp,bt].forEach(function(f){ slab.appendChild(f); });
+    slabParts.push({sides:[front,back,lf,rt], top:tp});
+    slab.addEventListener("click", function(e){ e.stopPropagation(); select(i); });
+    slab.addEventListener("keydown", function(e){
+      if(e.key==="Enter"||e.key===" "){ e.preventDefault(); select(i); }
+    });
+    slab.addEventListener("pointerenter", function(){ slab.classList.add("hot"); });
+    slab.addEventListener("pointerleave", function(){ slab.classList.remove("hot"); });
+    pyramidEl.appendChild(slab);
+    slabEls.push(slab);
+  });
+
+  /* heights per profile */
+  var heights = [0,0,0,0,0];
+  function computeHeights(fiPct){
+    var eq = 100 - fiPct;
+    var h = [];
+    h[0] = 16 + fiPct*0.92;              // fixed income base
+    for(var i=1;i<5;i++) h[i] = 10 + eq*0.30;
+    return h;
+  }
+  function layout(){
+    var y = 0;
+    for(var i=0;i<5;i++){
+      var H = heights[i], parts = slabParts[i];
+      slabEls[i].style.transform = "translate3d(0,"+(-y)+"px,0)";
+      parts.sides.forEach(function(f){
+        f.style.height = H+"px";
+        f.style.top = (-H)+"px";
+      });
+      parts.top.style.transform = "translateY("+(-H)+"px) rotateX(90deg)";
+      y += H + GAP;
+    }
+  }
+
+  /* ============ static camera angle (matches the reference photo) ============ */
+  pyramidEl.style.transform = "translate(-50%,0) rotateX(-18deg) rotateY(-28deg)";
+  stage.addEventListener("click", function(){ select(-1); });
+
+  /* ============ panel ============ */
+  var selected = -1;
+  var pBadge=document.getElementById("pBadge"),
+      pTitle=document.getElementById("pTitle"),
+      pBody=document.getElementById("pBody"),
+      pChips=document.getElementById("pChips"),
+      pChipsLabel=document.getElementById("pChipsLabel"),
+      pChipsWrap=document.getElementById("pChipsWrap"),
+      pAlloc=document.getElementById("pAlloc"),
+      lvlNav=document.getElementById("lvlNav");
+
+  var navBtns = [];
+  var ovBtn = document.createElement("button");
+  ovBtn.className = "lvl-btn overview-btn";
+  ovBtn.textContent = "Overview";
+  ovBtn.addEventListener("click", function(){ select(-1); });
+  lvlNav.appendChild(ovBtn);
+  LAYERS.forEach(function(L,i){
+    var b = document.createElement("button");
+    b.className = "lvl-btn";
+    b.textContent = (i+1);
+    b.title = L.short;
+    b.setAttribute("aria-label","Level "+(i+1)+": "+L.short);
+    b.addEventListener("click", function(){ select(i); });
+    lvlNav.appendChild(b);
+    navBtns.push(b);
+  });
+
+  function renderPanel(){
+    var d = (selected===-1) ? OVERVIEW : LAYERS[selected];
+    pBadge.textContent = (selected===-1) ? d.section :
+      "Level "+(selected+1)+" \u00B7 "+d.section;
+    pBadge.style.background = d.badgeBg;
+    pBadge.style.color = d.badgeFg;
+    pTitle.innerHTML = d.title;
+    pBody.innerHTML = d.body;
+    if(d.chips && d.chips.length){
+      pChipsWrap.style.display = "";
+      pChipsLabel.textContent = d.chipsLabel;
+      pChips.innerHTML = d.chips.map(function(c){
+        return '<span class="chip">'+c[0]+'<small>'+c[1]+'</small></span>';
+      }).join("");
+    } else {
+      pChipsWrap.style.display = "none";
+    }
+    if(d.balanced){
+      pAlloc.style.display = "";
+      pAlloc.innerHTML = '<span class="num">'+d.balanced[0]+'%</span>'+
+        '<span class="cap">'+d.balanced[1]+'</span>';
+    } else {
+      pAlloc.style.display = "";
+      pAlloc.innerHTML = '<span class="cap">Risk increases from base to top. '+
+        'Layer sizes shown reflect the selected risk profile&rsquo;s fixed-income / equity split.</span>';
+    }
+    ovBtn.classList.toggle("on", selected===-1);
+    ovBtn.style.background = selected===-1 ? "var(--ink)" : "transparent";
+    ovBtn.style.borderColor = selected===-1 ? "var(--ink)" : "var(--line)";
+    ovBtn.style.color = selected===-1 ? "#fff" : "var(--ink-soft)";
+    navBtns.forEach(function(b,i){
+      var on = (i===selected);
+      b.classList.toggle("on", on);
+      b.style.setProperty("--btn-bg", LAYERS[i].colors.front);
+      b.style.background = on ? LAYERS[i].colors.front : "transparent";
+      b.style.borderColor = on ? LAYERS[i].colors.front : "var(--line)";
+      b.style.color = on ? "#fff" : "var(--ink-soft)";
+    });
+    updateDims();
+  }
+
+  function updateDims(){
+    var fi = PROFILES[activeProfile][1], eq = 100 - fi;
+    slabEls.forEach(function(s,i){
+      var zeroAlloc = (i===0 && fi===0) || (i>0 && eq===0);
+      var deselected = (selected!==-1 && i!==selected);
+      s.classList.toggle("dim", zeroAlloc || deselected);
+      if(i===selected){
+        s.classList.remove("sel");
+        void s.offsetWidth; /* restart blink animation */
+        s.classList.add("sel");
+      } else {
+        s.classList.remove("sel");
+      }
+    });
+  }
+
+  function select(i){
+    selected = i;
+    renderPanel();
+    layout();
+  }
+
+  /* ============ profiles (slider) ============ */
+  var slider = document.getElementById("profileSlider"),
+      profileName = document.getElementById("profileName"),
+      fiBar = document.getElementById("fiBar"),
+      eqBar = document.getElementById("eqBar"),
+      splitRead = document.getElementById("splitRead");
+  var activeProfile = 3; // Balanced
+
+  slider.addEventListener("input", function(){
+    setProfile(parseInt(slider.value,10));
+  });
+
+  function setProfile(i){
+    activeProfile = i;
+    var fi = PROFILES[i][1], eq = 100-fi;
+    slider.value = i;
+    slider.setAttribute("aria-valuetext", PROFILES[i][0]);
+    profileName.textContent = PROFILES[i][0];
+    fiBar.style.width = fi+"%";
+    eqBar.style.width = eq+"%";
+    splitRead.innerHTML = "<b>"+fi+"%</b> fixed income &nbsp;/&nbsp; <b>"+eq+"%</b> equities";
+    heights = computeHeights(fi);
+    updateDims();
+    layout();
+  }
+
+  setProfile(3);
+  select(-1);
+})();
+</script>
