@@ -21,7 +21,7 @@
     -webkit-font-smoothing:antialiased;
     min-height:100vh;
   }
-  .wrap{max-width:1160px;margin:0 auto;padding:0 0 30px;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0;}
 
   /* ---------- header ---------- */
   header{display:none;}
@@ -43,7 +43,7 @@
   /* ---------- risk profile strip ---------- */
   .profiles{
     display:flex;flex-direction:column;gap:10px;
-    padding:0 0 20px;
+    padding:0 0 14px;
   }
   .profiles-top{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;}
   .profiles-top .splitbar{margin-left:auto;}
@@ -117,7 +117,7 @@
   /* ---------- main grid ---------- */
   main{
     display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
-    gap:34px;align-items:stretch;margin-top:0;
+    gap:30px;align-items:stretch;margin-top:0;
   }
 
   /* ---------- 3D scene ---------- */
@@ -127,7 +127,7 @@
     background:
       radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,.55), rgba(255,255,255,0) 60%),
       linear-gradient(var(--ivory), var(--ivory-deep));
-    min-height:520px;
+    min-height:465px;
     overflow:hidden;
   }
   .scene{
@@ -198,9 +198,9 @@
   .panel{
     display:flex;flex-direction:column;
     border-top:1px solid rgba(22,40,60,.18);
-    padding-top:22px;min-height:520px;box-sizing:border-box;
+    padding-top:18px;min-height:465px;box-sizing:border-box;
   }
-  .lvl-nav{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap;}
+  .lvl-nav{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
   .lvl-btn{
     width:34px;height:34px;border-radius:50%;
     border:1px solid var(--line);background:transparent;
@@ -231,25 +231,17 @@
     font-size:clamp(24px,2.6vw,31px);line-height:1.15;
     margin:0 0 14px;text-wrap:balance;
   }
-  .panel .body{color:var(--ink-soft);font-size:14.5px;line-height:1.7;max-width:60ch;}
-  .panel .body p{margin:0 0 13px;}
+  .panel .body{color:var(--ink-soft);font-size:14px;line-height:1.62;max-width:60ch;}
+  .panel .body p{margin:0 0 11px;}
   .panel .body strong{color:var(--ink);font-weight:600;}
 
-  .chips-label{
-    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-    color:var(--ink-soft);font-weight:600;margin:20px 0 10px;
-  }
-  .chips{display:flex;flex-wrap:wrap;gap:7px;}
-  .chip{
-    font-size:12px;padding:6px 11px;border-radius:3px;
-    background:#fff;border:1px solid var(--line);color:var(--ink);
-    font-variant-numeric:tabular-nums;
-  }
-  .chip small{color:var(--ink-soft);margin-left:5px;}
-
-  footer{
-    margin-top:30px;padding-top:16px;border-top:1px solid var(--line);
-    font-size:11.5px;color:var(--ink-soft);line-height:1.6;max-width:100ch;
+  .disclosure{
+    margin-top:auto;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+    color:var(--ink-soft);
+    font-size:10.5px;
+    line-height:1.55;
   }
 
   @media (max-width:900px){
@@ -322,20 +314,14 @@
       <span class="badge" id="pBadge"></span>
       <h2 id="pTitle"></h2>
       <div class="body" id="pBody"></div>
-      <div id="pChipsWrap">
-        <p class="chips-label" id="pChipsLabel"></p>
-        <div class="chips" id="pChips"></div>
-      </div>
+      <p class="disclosure">
+        The Securities Investment Pyramid&trade; is a proprietary Leppla Capital methodology. Investment
+        loss in the securities markets is possible, and there is no guarantee the Pyramid will ensure
+        principal safety. This material is illustrative only and is not a recommendation to buy or sell
+        any security.
+      </p>
     </aside>
   </main>
-
-  <footer>
-    The Securities Investment Pyramid&trade; is a proprietary Leppla Capital methodology by which investors
-    can assess and implement their own investment strategies. Investment loss in the securities markets is
-    inevitable; there is no guarantee the Pyramid will ensure principal safety. Holdings shown are examples
-    drawn from Leppla Capital model portfolios and are illustrative only &mdash; not a recommendation to buy or
-    sell any security. Investors should research direct investments and make their own choices.
-  </footer>
 </div>
 
 <script>
@@ -349,8 +335,6 @@
       badgeBg:"#C2996B", badgeFg:"#fff",
       colors:{top:"#B8935F", front:"#9C7443", side:"#7E5C34", back:"#6F5230", edge:"#5E451F"},
       body:"<p>The base of the portfolio is built for <strong>stability, income, and liquidity</strong>. These holdings give the rest of the allocation room to take measured risk.</p><p>The exact mix changes with interest rates, time horizon, and risk tolerance. More conservative clients hold more here; more growth-oriented clients hold less.</p>",
-      chipsLabel:"Examples from LC model portfolios",
-      chips:[["U.S. T-Notes","2&ndash;5 yr ladder"],["VTIP","inflation-protected"],["VGSH","short treasuries"],["IG corporates","Apple, J&J, JPMorgan"],["PIMIX","active manager"],["SHYG","short-term high yield"]],
       balanced:[50,"of the illustrative Balanced portfolio sits in the fixed-income foundation."]
     },
     {
@@ -359,8 +343,6 @@
       badgeBg:"#D9B584", badgeFg:"#42301A",
       colors:{top:"#EBD9B8", front:"#DDC49A", side:"#C4A878", back:"#B69A6A", edge:"#8F7443"},
       body:"<p>This layer provides broad equity exposure through <strong>low-cost, diversified market funds</strong>. It is the portfolio's basic participation in long-term market growth.</p><p>Because the holdings are broad, this layer helps avoid making the entire plan dependent on one company, one sector, or one investment theme.</p>",
-      chipsLabel:"Examples from LC model portfolios",
-      chips:[["VOO","S&P 500"],["QQQM","Nasdaq 100"],["VXF","mid / small cap"],["SCHD","dividend equities"],["VEA","developed international"]],
       balanced:[10,"of the illustrative Balanced portfolio forms the broad equity core."]
     },
     {
@@ -369,8 +351,6 @@
       badgeBg:"#33517A", badgeFg:"#fff",
       colors:{top:"#31517E", front:"#243D60", side:"#1A2E4A", back:"#172942", edge:"#101E33"},
       body:"<p>This is where the portfolio begins to express a view. Alpha Level One uses <strong>sector and asset-class funds</strong> to tilt toward areas that appear attractive relative to risk.</p><p>The goal is not to make a concentrated bet. It is to add judgment while still keeping diversification inside each fund.</p>",
-      chipsLabel:"Examples from LC model portfolios",
-      chips:[["XLE","energy sector"],["XLK","technology sector"],["XLU","utilities"],["XLP","consumer staples"],["IEFA","intl developed"],["RZG","small-cap growth"]],
       balanced:[15,"of the illustrative Balanced portfolio is spread across sector and asset-class funds."]
     },
     {
@@ -379,8 +359,6 @@
       badgeBg:"#5674A3", badgeFg:"#fff",
       colors:{top:"#6988B8", front:"#4F6D9E", side:"#3E577F", back:"#374E73", edge:"#2C3F5D"},
       body:"<p>Alpha Level Two narrows the lens. These are <strong>specialty and thematic funds</strong> tied to more specific opportunities, such as a sub-sector, region, or investment theme.</p><p>Because the risk is more focused, this layer sits higher in the pyramid and is sized with more restraint.</p>",
-      chipsLabel:"Examples from LC model portfolios",
-      chips:[["QTUM","quantum &amp; AI"],["EUAD","European defense"],["EZU","Eurozone"],["XBI","biotech"],["SOXX","semiconductors"],["GDX","gold miners"]],
       balanced:[15,"of the illustrative Balanced portfolio is allocated to focused thematic funds."]
     },
     {
@@ -389,8 +367,6 @@
       badgeBg:"#8FA8CF", badgeFg:"#1B2B42",
       colors:{top:"#C0D0E8", front:"#A2B8D8", side:"#8AA1C4", back:"#7E95B8", edge:"#5F7699"},
       body:"<p>The top layer is reserved for <strong>individual securities</strong>. These positions can reflect higher conviction, but they also carry more company-specific risk.</p><p>That is why this layer is intentionally small. It should complement the portfolio below it, not dominate the client's financial outcome.</p>",
-      chipsLabel:"Examples from LC model portfolios",
-      chips:[["MU","semiconductors / AI"],["BMY","pharma"],["UNCY","biotech"],["PWP","investment banking"],["NVDA","suggested"],["CAT","suggested"],["GS","suggested"]],
       balanced:[10,"of the illustrative Balanced portfolio is reserved for direct equity exposure."]
     }
   ];
@@ -404,7 +380,7 @@
     badgeBg:"#16283C", badgeFg:"#fff", section:"The Methodology",
     title:"Read it from the bottom up",
     body:"<p>The framework is read from the bottom up. The <strong>foundation</strong> is built for durability and broad market participation. The middle layers add selective exposure. The top layer is reserved for direct investments.</p><p>Risk increases as you move higher, so sizing matters. Use the risk profile control to see how the base changes, then select a layer to see why it belongs in the portfolio.</p>",
-    chipsLabel:"", chips:[], balanced:null
+    balanced:null
   };
 
   /* ============ 3D construction ============ */
@@ -505,9 +481,6 @@
   var pBadge=document.getElementById("pBadge"),
       pTitle=document.getElementById("pTitle"),
       pBody=document.getElementById("pBody"),
-      pChips=document.getElementById("pChips"),
-      pChipsLabel=document.getElementById("pChipsLabel"),
-      pChipsWrap=document.getElementById("pChipsWrap"),
       lvlNav=document.getElementById("lvlNav");
 
   var navBtns = [];
@@ -535,15 +508,6 @@
     pBadge.style.color = d.badgeFg;
     pTitle.innerHTML = d.title;
     pBody.innerHTML = d.body;
-    if(d.chips && d.chips.length){
-      pChipsWrap.style.display = "";
-      pChipsLabel.textContent = d.chipsLabel;
-      pChips.innerHTML = d.chips.map(function(c){
-        return '<span class="chip">'+c[0]+'<small>'+c[1]+'</small></span>';
-      }).join("");
-    } else {
-      pChipsWrap.style.display = "none";
-    }
     ovBtn.classList.toggle("on", selected===-1);
     ovBtn.style.background = selected===-1 ? "var(--ink)" : "transparent";
     ovBtn.style.borderColor = selected===-1 ? "var(--ink)" : "var(--line)";
