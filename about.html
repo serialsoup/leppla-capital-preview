@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About Us</title>
-    <link rel="stylesheet" href="styles.css?v=20260702-about-doc-update" />
+    <link rel="stylesheet" href="styles.css?v=20260702-interactive-pyramid" />
   </head>
   <body class="figma-subpage">
     <header class="site-header">
@@ -24,7 +24,41 @@
       </section>
       <section class="about-framework">
         <figure class="about-framework-visual">
-          <img src="assets/securities-investment-pyramid.svg?v=20260629-review-4" alt="Securities Investment Pyramid graphic" />
+          <div class="interactive-pyramid" data-pyramid>
+            <div class="interactive-pyramid-title">
+              <span>Securities Investment</span>
+              <strong>Pyramid™</strong>
+            </div>
+            <div class="pyramid-stage" aria-label="Interactive Securities Investment Pyramid">
+              <button class="pyramid-layer pyramid-layer-5" type="button" data-layer="direct" aria-pressed="false">
+                <span>Direct Investments</span>
+              </button>
+              <button class="pyramid-layer pyramid-layer-4" type="button" data-layer="alpha-two" aria-pressed="false">
+                <span>Alpha Level Two</span>
+              </button>
+              <button class="pyramid-layer pyramid-layer-3" type="button" data-layer="alpha-one" aria-pressed="false">
+                <span>Alpha Level One</span>
+              </button>
+              <button class="pyramid-layer pyramid-layer-2" type="button" data-layer="core-beta" aria-pressed="false">
+                <span>Core Market Beta</span>
+              </button>
+              <button class="pyramid-layer pyramid-layer-1 is-selected" type="button" data-layer="foundation" aria-pressed="true">
+                <span>Foundational Investments</span>
+              </button>
+            </div>
+            <div class="pyramid-caption">
+              <span>Securities Investment</span>
+              <span>Increasing risk and return potential</span>
+            </div>
+          </div>
+          <figcaption class="pyramid-detail" data-pyramid-detail>
+            <span class="pyramid-detail-kicker">Selected Layer</span>
+            <h3>Foundational Investments</h3>
+            <p>
+              The broad base of the portfolio. These holdings are designed to provide durability,
+              diversification, and the core market exposure that every disciplined allocation depends on.
+            </p>
+          </figcaption>
         </figure>
         <div class="about-framework-copy">
           <p>
@@ -140,6 +174,6 @@
       </section>
     </main>
     <footer class="site-footer"><div><img src="assets/leppla-strata-lockup.svg?v=20260630-tight-lockup" alt="Leppla Capital Management" /><p>Discipline | Integrity | Results</p></div><nav><a href="about.html">About</a><a href="services.html">Our Work</a><a href="academy.html">Resources</a><a href="privacy-policy.html">Privacy Policy</a><a href="glba-privacy-notice.html">GLBA Privacy Notice</a><a href="disclosures.html">Disclosures</a><a href="regulatory-disclosures.html">Regulatory Disclosures</a><a href="terms.html">Terms &amp; Conditions</a></nav><p class="legal">© 2026 Leppla Capital Management. Information on this website is for informational purposes only.</p></footer>
-    <script src="script.js?v=20260629-home-rework-2"></script>
+    <script src="script.js?v=20260702-interactive-pyramid"></script>
   </body>
 </html>
