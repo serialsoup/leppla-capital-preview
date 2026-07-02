@@ -9395,8 +9395,8 @@ textarea {
 .figma-subpage:has(.about-hero-v3) .about-pyramid-widget {
   width: 100%;
   margin: 0;
-  min-height: calc(100vh - 96px);
-  padding: clamp(24px, 3vw, 38px) 0 clamp(20px, 3vw, 36px);
+  min-height: 100vh;
+  padding: calc(90px + clamp(20px, 2.5vw, 34px)) 0 clamp(20px, 3vw, 36px);
   background:
     linear-gradient(180deg, #fff 0%, #f7f4ed 58%, #fff 100%);
 }
@@ -9431,7 +9431,7 @@ textarea {
 .figma-subpage:has(.about-hero-v3) .about-pyramid-widget iframe {
   display: block;
   width: min(1160px, calc(100% - 64px));
-  height: 690px;
+  height: 600px;
   margin: 0 auto;
   border: 0;
   border-top: 1px solid rgba(8, 45, 82, 0.12);
@@ -9828,7 +9828,7 @@ textarea {
 @media (max-width: 620px) {
   .figma-subpage:has(.about-hero-v3) .about-pyramid-widget {
     min-height: 0;
-    padding-top: 34px;
+    padding-top: 92px;
   }
 
   .figma-subpage:has(.about-hero-v3) .about-pyramid-intro {
@@ -9840,7 +9840,7 @@ textarea {
 
   .figma-subpage:has(.about-hero-v3) .about-pyramid-widget iframe {
     width: min(100% - 28px, 560px);
-    height: 1350px;
+    height: 1300px;
   }
 
   .figma-subpage:has(.about-hero-v3) .about-framework,
