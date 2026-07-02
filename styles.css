@@ -9871,92 +9871,6 @@ textarea {
   overflow: visible;
 }
 
-.figma-subpage:has(.about-hero-v3) .interactive-pyramid::before {
-  content: "";
-  position: absolute;
-  left: 17%;
-  right: 16%;
-  bottom: 16%;
-  height: 34px;
-  border-radius: 50%;
-  background: rgba(8, 45, 82, 0.14);
-  filter: blur(18px);
-}
-
-.figma-subpage:has(.about-hero-v3) .interactive-pyramid > img {
-  position: relative;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  max-width: 316px;
-  margin: 0 auto;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.figma-subpage:has(.about-hero-v3) .pyramid-hotspots {
-  position: absolute;
-  inset: 22px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.figma-subpage:has(.about-hero-v3) .pyramid-hotspot {
-  position: absolute;
-  display: block;
-  border: 1px solid transparent;
-  background: rgba(201, 137, 24, 0);
-  cursor: pointer;
-  pointer-events: auto;
-  transition: background 170ms ease, border-color 170ms ease, box-shadow 170ms ease, transform 170ms ease;
-  clip-path: polygon(50% 0, 100% 34%, 50% 100%, 0 66%);
-}
-
-.figma-subpage:has(.about-hero-v3) .pyramid-hotspot:hover,
-.figma-subpage:has(.about-hero-v3) .pyramid-hotspot:focus-visible,
-.figma-subpage:has(.about-hero-v3) .pyramid-hotspot.is-selected {
-  border-color: rgba(201, 137, 24, 0.86);
-  background: rgba(201, 137, 24, 0.18);
-  box-shadow: 0 0 0 4px rgba(201, 137, 24, 0.12);
-  transform: translateY(-4px);
-  outline: none;
-}
-
-.figma-subpage:has(.about-hero-v3) .pyramid-hotspot-direct {
-  left: 37%;
-  top: 34%;
-  width: 25%;
-  height: 12%;
-}
-
-.figma-subpage:has(.about-hero-v3) .pyramid-hotspot-alpha-two {
-  left: 30%;
-  top: 42%;
-  width: 40%;
-  height: 14%;
-}
-
-.figma-subpage:has(.about-hero-v3) .pyramid-hotspot-alpha-one {
-  left: 25%;
-  top: 51%;
-  width: 52%;
-  height: 15%;
-}
-
-.figma-subpage:has(.about-hero-v3) .pyramid-hotspot-core-beta {
-  left: 18%;
-  top: 61%;
-  width: 66%;
-  height: 18%;
-}
-
-.figma-subpage:has(.about-hero-v3) .pyramid-hotspot-foundation {
-  left: 8%;
-  top: 73%;
-  width: 84%;
-  height: 18%;
-}
-
 .figma-subpage:has(.about-hero-v3) .pyramid-detail {
   width: auto;
   min-height: 260px;
@@ -10001,14 +9915,6 @@ textarea {
   .figma-subpage:has(.about-hero-v3) .interactive-pyramid {
     width: 100%;
     padding: 18px;
-  }
-
-  .figma-subpage:has(.about-hero-v3) .interactive-pyramid > img {
-    max-width: 100%;
-  }
-
-  .figma-subpage:has(.about-hero-v3) .pyramid-hotspots {
-    inset: 18px;
   }
 
   .figma-subpage:has(.about-hero-v3) .pyramid-detail {
