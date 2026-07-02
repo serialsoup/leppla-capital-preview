@@ -155,11 +155,14 @@
      (group opacity/filter would flatten the 3D children); faces stay
      fully opaque so layers never show through each other */
   .slab.dim .face{filter:saturate(.55) brightness(1.07);}
+  .slab.zero .face{filter:grayscale(1) saturate(.08) brightness(1.18) contrast(.82);}
   .slab.hot .face{filter:brightness(1.07);}
   .slab.sel .face{
     filter:brightness(1.09) saturate(1.12);
     animation:layerblink .65s ease-out;
   }
+  .slab.zero.sel .face,
+  .slab.zero.hot .face{filter:grayscale(1) saturate(.08) brightness(1.18) contrast(.82);}
   @keyframes layerblink{
     0%{filter:brightness(1) saturate(1);}
     35%{filter:brightness(1.38) saturate(1.25);}
@@ -244,17 +247,6 @@
   }
   .chip small{color:var(--ink-soft);margin-left:5px;}
 
-  .alloc{
-    margin-top:auto;padding-top:20px;
-    border-top:1px solid var(--line);
-    display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
-  }
-  .alloc .num{
-    font-family:var(--serif);font-size:40px;line-height:1;
-    font-variant-numeric:tabular-nums;
-  }
-  .alloc .cap{font-size:12.5px;color:var(--ink-soft);line-height:1.5;max-width:34ch;}
-
   footer{
     margin-top:30px;padding-top:16px;border-top:1px solid var(--line);
     font-size:11.5px;color:var(--ink-soft);line-height:1.6;max-width:100ch;
@@ -264,7 +256,6 @@
     main{grid-template-columns:1fr;}
     .stage{min-height:420px;}
     .panel{min-height:0;}
-    .alloc{margin-top:24px;}
   }
   @media (max-width:560px){
     .stage-title{
@@ -335,7 +326,6 @@
         <p class="chips-label" id="pChipsLabel"></p>
         <div class="chips" id="pChips"></div>
       </div>
-      <div class="alloc" id="pAlloc"></div>
     </aside>
   </main>
 
@@ -518,7 +508,6 @@
       pChips=document.getElementById("pChips"),
       pChipsLabel=document.getElementById("pChipsLabel"),
       pChipsWrap=document.getElementById("pChipsWrap"),
-      pAlloc=document.getElementById("pAlloc"),
       lvlNav=document.getElementById("lvlNav");
 
   var navBtns = [];
@@ -555,15 +544,6 @@
     } else {
       pChipsWrap.style.display = "none";
     }
-    if(d.balanced){
-      pAlloc.style.display = "";
-      pAlloc.innerHTML = '<span class="num">'+d.balanced[0]+'%</span>'+
-        '<span class="cap">'+d.balanced[1]+'</span>';
-    } else {
-      pAlloc.style.display = "";
-      pAlloc.innerHTML = '<span class="cap">Risk increases from base to top. '+
-        'Layer sizes shown reflect the selected risk profile&rsquo;s fixed-income / equity split.</span>';
-    }
     ovBtn.classList.toggle("on", selected===-1);
     ovBtn.style.background = selected===-1 ? "var(--ink)" : "transparent";
     ovBtn.style.borderColor = selected===-1 ? "var(--ink)" : "var(--line)";
@@ -584,7 +564,8 @@
     slabEls.forEach(function(s,i){
       var zeroAlloc = (i===0 && fi===0) || (i>0 && eq===0);
       var deselected = (selected!==-1 && i!==selected);
-      s.classList.toggle("dim", zeroAlloc || deselected);
+      s.classList.toggle("zero", zeroAlloc);
+      s.classList.toggle("dim", deselected && !zeroAlloc);
       if(i===selected){
         s.classList.remove("sel");
         void s.offsetWidth; /* restart blink animation */
