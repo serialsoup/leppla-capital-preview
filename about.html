@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About Us</title>
-    <link rel="stylesheet" href="styles.css?v=20260702-reference-pyramid" />
+    <link rel="stylesheet" href="styles.css?v=20260702-true-3d-pyramid" />
   </head>
   <body class="figma-subpage">
     <header class="site-header">
@@ -26,14 +26,124 @@
         <figure class="about-framework-visual">
           <div class="pyramid-experience">
             <div class="interactive-pyramid" data-pyramid>
-              <img src="assets/securities-investment-pyramid-3d-reference.png" alt="Securities Investment Pyramid graphic" />
-              <div class="pyramid-hotspots" aria-label="Interactive Securities Investment Pyramid">
-                <button class="pyramid-hotspot pyramid-hotspot-direct" type="button" data-layer="direct" aria-label="Direct Investments" aria-pressed="false"></button>
-                <button class="pyramid-hotspot pyramid-hotspot-alpha-two" type="button" data-layer="alpha-two" aria-label="Alpha Level Two" aria-pressed="false"></button>
-                <button class="pyramid-hotspot pyramid-hotspot-alpha-one" type="button" data-layer="alpha-one" aria-label="Alpha Level One" aria-pressed="false"></button>
-                <button class="pyramid-hotspot pyramid-hotspot-core-beta" type="button" data-layer="core-beta" aria-label="Core Market Beta" aria-pressed="false"></button>
-                <button class="pyramid-hotspot pyramid-hotspot-foundation is-selected" type="button" data-layer="foundation" aria-label="Foundational Investments" aria-pressed="true"></button>
-              </div>
+              <svg class="pyramid-svg" viewBox="0 0 560 500" role="img" aria-labelledby="pyramid-title pyramid-desc">
+                <title id="pyramid-title">Interactive Securities Investment Pyramid</title>
+                <desc id="pyramid-desc">A five-layer three-dimensional investment pyramid. Select a layer to learn what it means.</desc>
+                <defs>
+                  <linearGradient id="pyramid-bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#fffdf8" />
+                    <stop offset="100%" stop-color="#eee8da" />
+                  </linearGradient>
+                  <radialGradient id="pyramid-glow" cx="50%" cy="42%" r="52%">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+                    <stop offset="56%" stop-color="#ffffff" stop-opacity="0.36" />
+                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                  </radialGradient>
+                  <linearGradient id="foundationTop" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ffd38f" />
+                    <stop offset="55%" stop-color="#f0a957" />
+                    <stop offset="100%" stop-color="#dc8c38" />
+                  </linearGradient>
+                  <linearGradient id="foundationLeft" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ffc784" />
+                    <stop offset="100%" stop-color="#d48637" />
+                  </linearGradient>
+                  <linearGradient id="foundationRight" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#e89845" />
+                    <stop offset="100%" stop-color="#bd6f2f" />
+                  </linearGradient>
+                  <linearGradient id="coreTop" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#dca06b" />
+                    <stop offset="100%" stop-color="#a86435" />
+                  </linearGradient>
+                  <linearGradient id="coreLeft" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#c78b5d" />
+                    <stop offset="100%" stop-color="#93522d" />
+                  </linearGradient>
+                  <linearGradient id="coreRight" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#a96536" />
+                    <stop offset="100%" stop-color="#7a4125" />
+                  </linearGradient>
+                  <linearGradient id="alphaOneTop" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#416d99" />
+                    <stop offset="100%" stop-color="#173b60" />
+                  </linearGradient>
+                  <linearGradient id="alphaOneLeft" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#385f88" />
+                    <stop offset="100%" stop-color="#12324f" />
+                  </linearGradient>
+                  <linearGradient id="alphaOneRight" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#224a73" />
+                    <stop offset="100%" stop-color="#0d2944" />
+                  </linearGradient>
+                  <linearGradient id="alphaTwoTop" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#5b84ad" />
+                    <stop offset="100%" stop-color="#244e78" />
+                  </linearGradient>
+                  <linearGradient id="alphaTwoLeft" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#4c739e" />
+                    <stop offset="100%" stop-color="#1d456d" />
+                  </linearGradient>
+                  <linearGradient id="alphaTwoRight" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#365f89" />
+                    <stop offset="100%" stop-color="#163b60" />
+                  </linearGradient>
+                  <linearGradient id="directTop" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#b7c9df" />
+                    <stop offset="100%" stop-color="#6687ad" />
+                  </linearGradient>
+                  <linearGradient id="directLeft" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#9eb7d2" />
+                    <stop offset="100%" stop-color="#55769c" />
+                  </linearGradient>
+                  <linearGradient id="directRight" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#7898bc" />
+                    <stop offset="100%" stop-color="#45698f" />
+                  </linearGradient>
+                  <filter id="slabShadow" x="-30%" y="-30%" width="160%" height="180%">
+                    <feDropShadow dx="0" dy="15" stdDeviation="10" flood-color="#082d52" flood-opacity="0.18" />
+                  </filter>
+                  <filter id="slabLiftShadow" x="-30%" y="-40%" width="160%" height="200%">
+                    <feDropShadow dx="0" dy="20" stdDeviation="12" flood-color="#082d52" flood-opacity="0.26" />
+                  </filter>
+                </defs>
+                <rect class="pyramid-svg-bg" x="8" y="8" width="544" height="484" rx="8" fill="url(#pyramid-bg)" />
+                <ellipse cx="280" cy="390" rx="180" ry="34" fill="#082d52" opacity="0.12" filter="url(#slabShadow)" />
+                <circle cx="282" cy="210" r="190" fill="url(#pyramid-glow)" />
+                <text class="pyramid-svg-title" x="146" y="68">Securities Investment</text>
+                <text class="pyramid-svg-title" x="178" y="88">Pyramid™</text>
+
+                <g class="pyramid-slab pyramid-slab-foundation is-selected" data-layer="foundation" tabindex="0" role="button" aria-label="Foundational Investments" aria-pressed="true">
+                  <polygon class="slab-side slab-left" points="92,372 282,286 282,338 92,424" />
+                  <polygon class="slab-side slab-right" points="282,286 472,372 472,424 282,338" />
+                  <polygon class="slab-top" points="92,372 282,286 472,372 282,458" />
+                </g>
+                <g class="pyramid-slab pyramid-slab-core-beta" data-layer="core-beta" tabindex="0" role="button" aria-label="Core Market Beta" aria-pressed="false">
+                  <polygon class="slab-side slab-left" points="132,301 282,234 282,276 132,343" />
+                  <polygon class="slab-side slab-right" points="282,234 432,301 432,343 282,276" />
+                  <polygon class="slab-top" points="132,301 282,234 432,301 282,369" />
+                </g>
+                <g class="pyramid-slab pyramid-slab-alpha-one" data-layer="alpha-one" tabindex="0" role="button" aria-label="Alpha Level One" aria-pressed="false">
+                  <polygon class="slab-side slab-left" points="172,239 282,190 282,225 172,274" />
+                  <polygon class="slab-side slab-right" points="282,190 392,239 392,274 282,225" />
+                  <polygon class="slab-top" points="172,239 282,190 392,239 282,289" />
+                </g>
+                <g class="pyramid-slab pyramid-slab-alpha-two" data-layer="alpha-two" tabindex="0" role="button" aria-label="Alpha Level Two" aria-pressed="false">
+                  <polygon class="slab-side slab-left" points="204,188 282,153 282,183 204,218" />
+                  <polygon class="slab-side slab-right" points="282,153 360,188 360,218 282,183" />
+                  <polygon class="slab-top" points="204,188 282,153 360,188 282,224" />
+                </g>
+                <g class="pyramid-slab pyramid-slab-direct" data-layer="direct" tabindex="0" role="button" aria-label="Direct Investments" aria-pressed="false">
+                  <polygon class="slab-side slab-left" points="232,145 282,122 282,149 232,172" />
+                  <polygon class="slab-side slab-right" points="282,122 332,145 332,172 282,149" />
+                  <polygon class="slab-top" points="232,145 282,122 332,145 282,168" />
+                </g>
+
+                <path class="pyramid-callout-line" d="M300 116v-35h78" />
+                <text class="pyramid-callout-text" x="388" y="84">Direct / Alpha</text>
+                <path class="pyramid-callout-line" d="M330 336v100h36" />
+                <text class="pyramid-callout-text" x="374" y="440">Core / Foundation</text>
+              </svg>
             </div>
             <figcaption class="pyramid-detail" data-pyramid-detail>
               <span class="pyramid-detail-kicker">Selected Layer</span>
@@ -159,6 +269,6 @@
       </section>
     </main>
     <footer class="site-footer"><div><img src="assets/leppla-strata-lockup.svg?v=20260630-tight-lockup" alt="Leppla Capital Management" /><p>Discipline | Integrity | Results</p></div><nav><a href="about.html">About</a><a href="services.html">Our Work</a><a href="academy.html">Resources</a><a href="privacy-policy.html">Privacy Policy</a><a href="glba-privacy-notice.html">GLBA Privacy Notice</a><a href="disclosures.html">Disclosures</a><a href="regulatory-disclosures.html">Regulatory Disclosures</a><a href="terms.html">Terms &amp; Conditions</a></nav><p class="legal">© 2026 Leppla Capital Management. Information on this website is for informational purposes only.</p></footer>
-    <script src="script.js?v=20260702-reference-pyramid"></script>
+    <script src="script.js?v=20260702-true-3d-pyramid"></script>
   </body>
 </html>

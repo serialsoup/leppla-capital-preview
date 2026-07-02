@@ -96,6 +96,12 @@ if (pyramid && pyramidDetail) {
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => selectLayer(button));
+    button.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        selectLayer(button);
+      }
+    });
   });
 }
 

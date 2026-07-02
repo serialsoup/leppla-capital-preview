@@ -10015,3 +10015,182 @@ textarea {
     min-height: 0;
   }
 }
+
+/* True interactive SVG pyramid */
+.figma-subpage:has(.about-hero-v3) .pyramid-experience {
+  grid-template-columns: minmax(360px, 520px) minmax(260px, 330px);
+  align-items: center;
+  gap: clamp(22px, 3vw, 34px);
+}
+
+.figma-subpage:has(.about-hero-v3) .interactive-pyramid {
+  width: min(100%, 520px);
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.figma-subpage:has(.about-hero-v3) .interactive-pyramid::before {
+  content: none;
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  overflow: visible;
+  filter: drop-shadow(0 24px 54px rgba(8, 45, 82, 0.12));
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-svg-bg {
+  stroke: rgba(8, 45, 82, 0.08);
+  stroke-width: 1;
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-svg-title {
+  fill: #111;
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab {
+  cursor: pointer;
+  filter: url("#slabShadow");
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 190ms ease, filter 190ms ease, opacity 190ms ease;
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab .slab-top,
+.figma-subpage:has(.about-hero-v3) .pyramid-slab .slab-side {
+  stroke: rgba(255, 255, 255, 0.24);
+  stroke-width: 1.4;
+  vector-effect: non-scaling-stroke;
+  transition: stroke 190ms ease, stroke-width 190ms ease, filter 190ms ease;
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-foundation .slab-top {
+  fill: url("#foundationTop");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-foundation .slab-left {
+  fill: url("#foundationLeft");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-foundation .slab-right {
+  fill: url("#foundationRight");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-core-beta .slab-top {
+  fill: url("#coreTop");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-core-beta .slab-left {
+  fill: url("#coreLeft");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-core-beta .slab-right {
+  fill: url("#coreRight");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-alpha-one .slab-top {
+  fill: url("#alphaOneTop");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-alpha-one .slab-left {
+  fill: url("#alphaOneLeft");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-alpha-one .slab-right {
+  fill: url("#alphaOneRight");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-alpha-two .slab-top {
+  fill: url("#alphaTwoTop");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-alpha-two .slab-left {
+  fill: url("#alphaTwoLeft");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-alpha-two .slab-right {
+  fill: url("#alphaTwoRight");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-direct .slab-top {
+  fill: url("#directTop");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-direct .slab-left {
+  fill: url("#directLeft");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab-direct .slab-right {
+  fill: url("#directRight");
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab:hover,
+.figma-subpage:has(.about-hero-v3) .pyramid-slab:focus-visible,
+.figma-subpage:has(.about-hero-v3) .pyramid-slab.is-selected {
+  filter: url("#slabLiftShadow");
+  transform: translateY(-8px);
+  outline: none;
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab:hover .slab-top,
+.figma-subpage:has(.about-hero-v3) .pyramid-slab:focus-visible .slab-top,
+.figma-subpage:has(.about-hero-v3) .pyramid-slab.is-selected .slab-top {
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 2;
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-slab:focus-visible .slab-top {
+  stroke: #c88918;
+  stroke-width: 3;
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-callout-line {
+  fill: none;
+  stroke: rgba(17, 17, 17, 0.58);
+  stroke-width: 2;
+  stroke-linecap: square;
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-callout-text {
+  fill: #222;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.figma-subpage:has(.about-hero-v3) .pyramid-detail {
+  align-self: center;
+  min-height: 285px;
+  padding: 28px 28px 30px;
+}
+
+@media (max-width: 1120px) {
+  .figma-subpage:has(.about-hero-v3) .pyramid-experience {
+    grid-template-columns: minmax(360px, 520px) minmax(260px, 330px);
+  }
+}
+
+@media (max-width: 760px) {
+  .figma-subpage:has(.about-hero-v3) .pyramid-experience {
+    grid-template-columns: 1fr;
+  }
+
+  .figma-subpage:has(.about-hero-v3) .interactive-pyramid {
+    width: 100%;
+  }
+
+  .figma-subpage:has(.about-hero-v3) .pyramid-detail {
+    min-height: 0;
+  }
+}
