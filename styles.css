@@ -9389,19 +9389,49 @@ textarea {
 
 /* About page doc update */
 .figma-subpage:has(.about-hero-v3) .about-pyramid-widget {
-  width: min(1220px, calc(100% - 64px));
-  margin: 0 auto;
-  padding: clamp(46px, 6vw, 76px) 0 clamp(38px, 5vw, 68px);
+  width: 100%;
+  margin: 0;
+  padding: clamp(54px, 7vw, 88px) 0 clamp(46px, 6vw, 74px);
+  background:
+    linear-gradient(180deg, #fff 0%, #f7f4ed 46%, #fff 100%);
+}
+
+.figma-subpage:has(.about-hero-v3) .about-pyramid-intro {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(320px, 1fr);
+  gap: clamp(24px, 5vw, 86px);
+  align-items: end;
+  width: min(1120px, calc(100% - 64px));
+  margin: 0 auto clamp(22px, 3.2vw, 34px);
+}
+
+.figma-subpage:has(.about-hero-v3) .about-pyramid-intro h2 {
+  margin: 0;
+  color: #082d52;
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4.2vw, 66px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.figma-subpage:has(.about-hero-v3) .about-pyramid-intro p {
+  margin: 0;
+  color: #5f6b76;
+  font-size: clamp(16px, 1.25vw, 20px);
+  line-height: 1.65;
+  letter-spacing: 0;
 }
 
 .figma-subpage:has(.about-hero-v3) .about-pyramid-widget iframe {
   display: block;
-  width: 100%;
-  height: 1240px;
+  width: min(1160px, calc(100% - 64px));
+  height: 1050px;
+  margin: 0 auto;
   border: 0;
-  border-radius: 8px;
-  background: #f1ede3;
-  box-shadow: 0 24px 58px rgba(8, 45, 82, 0.1);
+  border-top: 1px solid rgba(8, 45, 82, 0.12);
+  border-bottom: 1px solid rgba(8, 45, 82, 0.12);
+  background: transparent;
 }
 
 .figma-subpage:has(.about-hero-v3) .about-framework {
@@ -9792,12 +9822,19 @@ textarea {
 
 @media (max-width: 620px) {
   .figma-subpage:has(.about-hero-v3) .about-pyramid-widget {
-    width: min(100% - 28px, 560px);
-    padding-top: 34px;
+    padding-top: 42px;
+  }
+
+  .figma-subpage:has(.about-hero-v3) .about-pyramid-intro {
+    grid-template-columns: 1fr;
+    width: min(100% - 40px, 560px);
+    gap: 16px;
+    margin-bottom: 22px;
   }
 
   .figma-subpage:has(.about-hero-v3) .about-pyramid-widget iframe {
-    height: 2200px;
+    width: min(100% - 28px, 560px);
+    height: 1990px;
   }
 
   .figma-subpage:has(.about-hero-v3) .about-framework,

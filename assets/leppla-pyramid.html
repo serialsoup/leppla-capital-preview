@@ -15,16 +15,16 @@
   }
   html,body{margin:0;padding:0;}
   body{
-    background:var(--ivory);
+    background:transparent;
     color:var(--ink);
     font-family:var(--sans);
     -webkit-font-smoothing:antialiased;
     min-height:100vh;
   }
-  .wrap{max-width:1160px;margin:0 auto;padding:48px 28px 40px;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 0 30px;}
 
   /* ---------- header ---------- */
-  header{border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:8px;}
+  header{display:none;}
   .eyebrow{
     font-size:11px;letter-spacing:.28em;text-transform:uppercase;
     color:var(--tan-deep);font-weight:600;margin:0 0 14px;
@@ -43,7 +43,7 @@
   /* ---------- risk profile strip ---------- */
   .profiles{
     display:flex;flex-direction:column;gap:10px;
-    padding:20px 0 4px;
+    padding:0 0 20px;
   }
   .profiles-top{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;}
   .profiles-top .splitbar{margin-left:auto;}
@@ -117,13 +117,13 @@
   /* ---------- main grid ---------- */
   main{
     display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
-    gap:36px;align-items:stretch;margin-top:8px;
+    gap:34px;align-items:stretch;margin-top:0;
   }
 
   /* ---------- 3D scene ---------- */
   .stage{
     position:relative;
-    border:1px solid var(--line);border-radius:6px;
+    border:1px solid rgba(22,40,60,.13);border-radius:4px;
     background:
       radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,.55), rgba(255,255,255,0) 60%),
       linear-gradient(var(--ivory), var(--ivory-deep));
@@ -176,13 +176,13 @@
   }
   .hint{
     position:absolute;left:0;right:0;bottom:14px;text-align:center;
-    font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+    font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
     color:var(--ink-soft);opacity:.75;pointer-events:none;
   }
   .stage-title{
     position:absolute;top:16px;left:18px;
-    font-family:var(--serif);font-size:14px;color:var(--ink-soft);
-    font-style:italic;pointer-events:none;
+    font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink-soft);pointer-events:none;
   }
   .readup{
     position:absolute;top:16px;right:18px;display:flex;align-items:center;gap:8px;
@@ -194,7 +194,7 @@
   /* ---------- detail panel ---------- */
   .panel{
     display:flex;flex-direction:column;
-    border-top:3px solid var(--ink);
+    border-top:1px solid rgba(22,40,60,.18);
     padding-top:22px;min-height:520px;box-sizing:border-box;
   }
   .lvl-nav{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap;}
@@ -256,7 +256,7 @@
   .alloc .cap{font-size:12.5px;color:var(--ink-soft);line-height:1.5;max-width:34ch;}
 
   footer{
-    margin-top:44px;padding-top:18px;border-top:1px solid var(--line);
+    margin-top:30px;padding-top:16px;border-top:1px solid var(--line);
     font-size:11.5px;color:var(--ink-soft);line-height:1.6;max-width:100ch;
   }
 
@@ -298,7 +298,7 @@
 
   <div class="profiles" role="group" aria-label="Risk tolerance profile">
     <div class="profiles-top">
-      <span class="profiles-label">Risk profile</span>
+      <span class="profiles-label">Illustrative profile</span>
       <span class="profile-name" id="profileName">Balanced</span>
       <div class="splitbar">
         <div class="bar" aria-hidden="true"><div class="fi" id="fiBar"></div><div class="eq" id="eqBar"></div></div>
@@ -315,15 +315,15 @@
 
   <main>
     <div class="stage" id="stage">
-      <div class="stage-title">Securities Investment Pyramid&trade;</div>
+      <div class="stage-title">Portfolio layers</div>
       <div class="readup">
         <svg width="10" height="26" viewBox="0 0 10 26" fill="none" aria-hidden="true">
           <path d="M5 25 V3 M1.5 6.5 L5 2 L8.5 6.5" stroke="#3D4E63" stroke-width="1.4" fill="none"/>
         </svg>
-        Read bottom&nbsp;up
+        Build from base
       </div>
       <div class="scene"><div class="pyramid" id="pyramid"></div></div>
-      <div class="hint">Click a layer to explore it</div>
+      <div class="hint">Select a layer</div>
     </div>
 
     <aside class="panel" aria-live="polite">
@@ -358,50 +358,50 @@
       title:"Foundational &mdash; Fixed Income",
       badgeBg:"#C2996B", badgeFg:"#fff",
       colors:{top:"#B8935F", front:"#9C7443", side:"#7E5C34", back:"#6F5230", edge:"#5E451F"},
-      body:"<p>The base of every pyramid: <strong>investment-grade fixed income</strong>. These holdings are designed for capital preservation and steady income &mdash; they anchor the portfolio so the layers above can take measured risk.</p><p>The mix runs from risk-free U.S. Treasuries and inflation-protected bonds to top-rated corporate credit, with duration chosen on the basis of relative yield to maturity. More conservative clients hold more of the pyramid here; the most aggressive hold the least.</p>",
+      body:"<p>The base of the portfolio is built for <strong>stability, income, and liquidity</strong>. These holdings give the rest of the allocation room to take measured risk.</p><p>The exact mix changes with interest rates, time horizon, and risk tolerance. More conservative clients hold more here; more growth-oriented clients hold less.</p>",
       chipsLabel:"Examples from LC model portfolios",
       chips:[["U.S. T-Notes","2&ndash;5 yr ladder"],["VTIP","inflation-protected"],["VGSH","short treasuries"],["IG corporates","Apple, J&J, JPMorgan"],["PIMIX","active manager"],["SHYG","short-term high yield"]],
-      balanced:[50,"Half of the illustrative $1M Balanced portfolio sits in the fixed-income foundation."]
+      balanced:[50,"of the illustrative Balanced portfolio sits in the fixed-income foundation."]
     },
     {
       id:"beta", short:"Market Beta", section:"Foundation",
       title:"Foundational &mdash; Core Market Beta",
       badgeBg:"#D9B584", badgeFg:"#42301A",
       colors:{top:"#EBD9B8", front:"#DDC49A", side:"#C4A878", back:"#B69A6A", edge:"#8F7443"},
-      body:"<p><strong>Market-beta equities</strong> &mdash; low-expense-ratio ETFs designed to mirror the general securities markets, up and down, knowing that over time the market is up.</p><p>These belong in every portfolio. Broad index funds across large, mid and small cap, plus international exposure, capture the market's long-run growth without single-name or single-sector risk.</p>",
+      body:"<p>This layer provides broad equity exposure through <strong>low-cost, diversified market funds</strong>. It is the portfolio's basic participation in long-term market growth.</p><p>Because the holdings are broad, this layer helps avoid making the entire plan dependent on one company, one sector, or one investment theme.</p>",
       chipsLabel:"Examples from LC model portfolios",
       chips:[["VOO","S&P 500"],["QQQM","Nasdaq 100"],["VXF","mid / small cap"],["SCHD","dividend equities"],["VEA","developed international"]],
-      balanced:[10,"of the illustrative $1M Balanced portfolio &mdash; the equity core the alpha layers build on."]
+      balanced:[10,"of the illustrative Balanced portfolio forms the broad equity core."]
     },
     {
       id:"a1", short:"Alpha Level 1", section:"Alpha",
       title:"Alpha Level One &mdash; Sectors &amp; Asset Classes",
       badgeBg:"#33517A", badgeFg:"#fff",
       colors:{top:"#31517E", front:"#243D60", side:"#1A2E4A", back:"#172942", edge:"#101E33"},
-      body:"<p>The first alpha layer <strong>tilts the portfolio toward where we see relative value</strong>, using two toolkits: the eleven S&P sector ETFs (technology, energy, utilities, staples&hellip;) and traditional asset-class ETFs on the value-to-growth spectrum.</p><p>Percentages are divided as deemed appropriate on the basis of risk and relative return &mdash; this is where portfolio construction starts expressing a view, while staying diversified inside each fund.</p>",
+      body:"<p>This is where the portfolio begins to express a view. Alpha Level One uses <strong>sector and asset-class funds</strong> to tilt toward areas that appear attractive relative to risk.</p><p>The goal is not to make a concentrated bet. It is to add judgment while still keeping diversification inside each fund.</p>",
       chipsLabel:"Examples from LC model portfolios",
       chips:[["XLE","energy sector"],["XLK","technology sector"],["XLU","utilities"],["XLP","consumer staples"],["IEFA","intl developed"],["RZG","small-cap growth"]],
-      balanced:[15,"of the illustrative $1M Balanced portfolio, spread across sector and asset-class ETFs."]
+      balanced:[15,"of the illustrative Balanced portfolio is spread across sector and asset-class funds."]
     },
     {
       id:"a2", short:"Alpha Level 2", section:"Alpha",
       title:"Alpha Level Two &mdash; Sub-Sectors &amp; Themes",
       badgeBg:"#5674A3", badgeFg:"#fff",
       colors:{top:"#6988B8", front:"#4F6D9E", side:"#3E577F", back:"#374E73", edge:"#2C3F5D"},
-      body:"<p>A sharper set of tilts: <strong>sub-sector, specialty and thematic ETFs</strong>. Where Alpha Level One buys \"health care,\" this layer can buy biotech; where Level One buys \"industrials,\" this layer can buy aerospace &amp; defense.</p><p>Higher potential return, higher volatility &mdash; so it sits nearer the top and is sized accordingly. Still fund-based, so risk is spread across many names within each theme.</p>",
+      body:"<p>Alpha Level Two narrows the lens. These are <strong>specialty and thematic funds</strong> tied to more specific opportunities, such as a sub-sector, region, or investment theme.</p><p>Because the risk is more focused, this layer sits higher in the pyramid and is sized with more restraint.</p>",
       chipsLabel:"Examples from LC model portfolios",
       chips:[["QTUM","quantum &amp; AI"],["EUAD","European defense"],["EZU","Eurozone"],["XBI","biotech"],["SOXX","semiconductors"],["GDX","gold miners"]],
-      balanced:[15,"of the illustrative $1M Balanced portfolio, in focused thematic funds."]
+      balanced:[15,"of the illustrative Balanced portfolio is allocated to focused thematic funds."]
     },
     {
       id:"de", short:"Direct Equity", section:"Direct Investments",
       title:"Direct Equity Investments",
       badgeBg:"#8FA8CF", badgeFg:"#1B2B42",
       colors:{top:"#C0D0E8", front:"#A2B8D8", side:"#8AA1C4", back:"#7E95B8", edge:"#5F7699"},
-      body:"<p>The apex: <strong>individual stocks held directly</strong> &mdash; the highest-conviction, highest-risk slice of the pyramid, deliberately kept smallest so no single name can drive the portfolio.</p><p>Positions are diversified across sectors and paired against the layers below so risk doesn't compound. Suggested names are researched by Leppla Capital, but investors should research direct investments and make their own choices.</p>",
+      body:"<p>The top layer is reserved for <strong>individual securities</strong>. These positions can reflect higher conviction, but they also carry more company-specific risk.</p><p>That is why this layer is intentionally small. It should complement the portfolio below it, not dominate the client's financial outcome.</p>",
       chipsLabel:"Examples from LC model portfolios",
       chips:[["MU","semiconductors / AI"],["BMY","pharma"],["UNCY","biotech"],["PWP","investment banking"],["NVDA","suggested"],["CAT","suggested"],["GS","suggested"]],
-      balanced:[10,"of the illustrative $1M Balanced portfolio, across a handful of researched names."]
+      balanced:[10,"of the illustrative Balanced portfolio is reserved for direct equity exposure."]
     }
   ];
 
@@ -413,7 +413,7 @@
   var OVERVIEW = {
     badgeBg:"#16283C", badgeFg:"#fff", section:"The Methodology",
     title:"Read it from the bottom up",
-    body:"<p>The Pyramid is divided into three sections. The <strong>Foundation</strong> &mdash; investment-grade fixed income and market-beta equities &mdash; belongs in every portfolio. Above it, two levels of <strong>Alpha investments</strong> tilt toward sectors, asset classes and themes. At the top, <strong>Direct Investments</strong> hold individual stocks.</p><p>Investment risk increases from the pyramid's base to its top, so each layer is sized to your risk tolerance. Choose a risk profile above to see how the fixed-income foundation grows or shrinks, and click any layer of the pyramid to learn what it does.</p>",
+    body:"<p>The framework is read from the bottom up. The <strong>foundation</strong> is built for durability and broad market participation. The middle layers add selective exposure. The top layer is reserved for direct investments.</p><p>Risk increases as you move higher, so sizing matters. Use the risk profile control to see how the base changes, then select a layer to see why it belongs in the portfolio.</p>",
     chipsLabel:"", chips:[], balanced:null
   };
 
