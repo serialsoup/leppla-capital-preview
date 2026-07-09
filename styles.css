@@ -10474,3 +10474,127 @@ body.team-page .team-doc-card p:not(.section-kicker) {
     padding: 24px;
   }
 }
+
+/* 2026-07-09 move proprietary model to Investment Approach */
+body.about-page .site-header,
+body.approach-page .site-header {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+}
+
+body.about-page .about-hero-v3 {
+  display: grid !important;
+}
+
+body.approach-page {
+  background: #fff;
+}
+
+body.approach-page main {
+  background: #fff;
+}
+
+body.approach-page .approach-pyramid-widget {
+  width: 100%;
+  min-height: calc(100vh - 81px);
+  margin: 0;
+  padding: clamp(18px, 2vw, 28px) 0 clamp(20px, 2.6vw, 34px);
+  background:
+    radial-gradient(circle at 50% 3%, rgba(194, 153, 107, 0.14), transparent 32%),
+    linear-gradient(180deg, #fff 0%, #f7f4ed 58%, #fff 100%);
+}
+
+body.approach-page .approach-pyramid-intro {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.9fr) minmax(420px, 1fr);
+  gap: clamp(24px, 4vw, 72px);
+  align-items: end;
+  width: min(1120px, calc(100% - 64px));
+  margin: 0 auto clamp(14px, 1.6vw, 20px);
+}
+
+body.approach-page .approach-pyramid-intro .section-kicker {
+  grid-column: 1 / -1;
+  margin-bottom: -8px;
+}
+
+body.approach-page .approach-pyramid-intro h1 {
+  margin: 0;
+  color: #082d52;
+  font-family: var(--font-serif);
+  font-size: clamp(42px, 4vw, 66px);
+  font-weight: 600;
+  line-height: 1.03;
+  letter-spacing: 0;
+}
+
+body.approach-page .approach-pyramid-intro p:not(.section-kicker) {
+  margin: 0;
+  color: #5f6b76;
+  font-size: clamp(16px, 1.25vw, 20px);
+  line-height: 1.62;
+  letter-spacing: 0;
+}
+
+body.approach-page .approach-pyramid-widget iframe {
+  display: block;
+  width: min(1160px, calc(100% - 64px));
+  height: clamp(430px, 52vh, 520px);
+  margin: 0 auto;
+  border: 0;
+  border-top: 1px solid rgba(8, 45, 82, 0.12);
+  border-bottom: 1px solid rgba(8, 45, 82, 0.12);
+  background: transparent;
+}
+
+body.approach-page .services-hero {
+  min-height: 560px;
+}
+
+body.approach-page .services-hero .section-kicker {
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+}
+
+body.approach-page .services-hero h1 {
+  font-size: clamp(46px, 5vw, 74px);
+}
+
+body.approach-page .services-hero p:not(.section-kicker) {
+  max-width: 520px;
+}
+
+@media (max-width: 900px) {
+  body.approach-page .approach-pyramid-intro {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 16px;
+  }
+
+  body.approach-page .approach-pyramid-intro .section-kicker {
+    margin-bottom: 0;
+  }
+
+  body.approach-page .approach-pyramid-widget iframe {
+    height: 560px;
+  }
+}
+
+@media (max-width: 620px) {
+  body.approach-page .approach-pyramid-widget {
+    min-height: 0;
+    padding: 34px 0 26px;
+  }
+
+  body.approach-page .approach-pyramid-intro,
+  body.approach-page .approach-pyramid-widget iframe {
+    width: calc(100% - 36px);
+  }
+
+  body.approach-page .approach-pyramid-widget iframe {
+    height: 640px;
+  }
+}
