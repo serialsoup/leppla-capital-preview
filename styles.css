@@ -10664,6 +10664,14 @@ body.team-page .team-doc-card img {
     linear-gradient(180deg, #edf1f3, #dbe2e6);
 }
 
+body.team-page .team-doc-card img.official-portrait-audrey {
+  padding: 18px;
+  object-fit: contain;
+  object-position: center;
+  filter: grayscale(1) contrast(0.92) brightness(1.06);
+  background: #e7ebed;
+}
+
 body.team-page .team-doc-card div {
   justify-content: start;
 }
