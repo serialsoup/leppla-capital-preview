@@ -574,5 +574,20 @@
 
   setProfile(3);
   select(-1);
+
+  function reportHeight(){
+    var height = Math.max(
+      document.documentElement.scrollHeight,
+      document.body ? document.body.scrollHeight : 0
+    );
+    window.parent.postMessage({type:"leppla-pyramid-height",height:height}, "*");
+  }
+
+  window.addEventListener("load", reportHeight);
+  window.addEventListener("resize", reportHeight);
+  if (window.ResizeObserver){
+    new ResizeObserver(reportHeight).observe(document.documentElement);
+  }
+  requestAnimationFrame(reportHeight);
 })();
 </script>

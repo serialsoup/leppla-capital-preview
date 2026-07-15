@@ -10541,7 +10541,7 @@ body.approach-page .approach-pyramid-intro p:not(.section-kicker) {
 body.approach-page .approach-pyramid-widget iframe {
   display: block;
   width: min(1160px, calc(100% - 64px));
-  height: clamp(430px, 52vh, 520px);
+  height: 620px;
   margin: 0 auto;
   border: 0;
   border-top: 1px solid rgba(8, 45, 82, 0.12);
@@ -10579,7 +10579,7 @@ body.approach-page .services-hero p:not(.section-kicker) {
   }
 
   body.approach-page .approach-pyramid-widget iframe {
-    height: 560px;
+    height: 1040px;
   }
 }
 
@@ -10595,7 +10595,7 @@ body.approach-page .services-hero p:not(.section-kicker) {
   }
 
   body.approach-page .approach-pyramid-widget iframe {
-    height: 640px;
+    height: 1080px;
   }
 }
 
